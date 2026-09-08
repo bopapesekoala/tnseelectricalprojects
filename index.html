@@ -78,11 +78,11 @@
   <style>
     /* Minimal fallback styling and component CSS */
     body { font-family: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
-    .cookie-consent-banner { position: fixed; right: 16px; bottom: 16px; background: rgba(15,23,42,0.96); color: #e6eef0; padding: 18px; border-radius: 12px; max-width: 360px; box-shadow: 0 8px 24px rgba(2,6,23,0.5); z-index: 9999; }
+    .cookie-consent-banner { position: fixed; right: 16px; bottom: 16px; background: rgba(15,23,42,0.96); color: #e6eef0; padding: 18px; border-radius: 12px; max-width: 360px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
     .cookie-consent-banner .cookie-actions { margin-top: 12px; display:flex; gap:8px; justify-content:flex-end; }
     .cookie-btn { background: #0ea5a4; color: white; padding: 8px 12px; border-radius: 8px; border: none; cursor: pointer; display:inline-flex; gap:8px; align-items:center; }
     .cookie-btn.btn-decline { background: transparent; color: #e6eef0; border: 1px solid rgba(226,238,240,0.12); }
-    .interactive-floating-section .float-btn { position: fixed; right: 16px; width: 44px; height: 44px; border-radius: 999px; display:flex; align-items:center; justify-content:center; background: #0ea5a4; color: #fff; box-shadow: 0 6px 18px rgba(2,6,23,0.2); z-index: 9998; margin-bottom: 8px; }
+    .interactive-floating-section .float-btn { position: fixed; right: 16px; width: 44px; height: 44px; border-radius: 999px; display:flex; align-items:center; justify-content:center; background: #0ea5a4; color: white; text-decoration: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
     .float-btn.btn-call { bottom: 140px; }
     .float-btn.btn-wa { bottom: 96px; right: 16px; background: #25D366; }
     .float-btn.btn-mail { bottom: 52px; right: 16px; background: #6b7280; }
@@ -166,7 +166,7 @@
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h2 class="text-2xl font-semibold mb-4">About TNSE Electrical Projects</h2>
-        <p class="text-slate-600 mb-4">TNSE provides planning, engineering and installation of solar PV systems, off-grid storage and hybrid backup setups along with full electrical contracting services — rewiring, maintenance and plant support.</p>
+        <p class="text-slate-600 mb-4">TNSE provides planning, engineering and installation of solar PV systems, off-grid storage and hybrid backup setups along with full electrical contracting services including household and commercial wiring, distribution boards, fault-finding and emergency repairs.</p>
         <ul class="space-y-2 text-slate-700">
           <li><i class="fa fa-check-circle text-primary mr-2"></i>Experienced certified electricians</li>
           <li><i class="fa fa-check-circle text-primary mr-2"></i>Solar PV design & installation</li>
@@ -317,7 +317,7 @@
   <section id="cookie-popup-section" class="cookie-consent-layout" aria-hidden="true">
     <div class="cookie-consent-banner" id="cookieConsentBanner" role="dialog" aria-labelledby="cookieHeader" aria-describedby="cookieText">
       <h3 class="cookie-header" id="cookieHeader"><i class="fas fa-cookie-bite"></i> Cookie &amp; Privacy Notice</h3>
-      <p class="cookie-text" id="cookieText">TNSE Electrical Projects uses cookies and secure local storage mechanisms to enhance your digital experience across our platforms. These essential files help us process your requests safely:</p>
+      <p class="cookie-text" id="cookieText">TNSE Electrical Projects uses cookies and secure local storage mechanisms to enhance your digital experience across our platforms. These essential files help us remember your preferences and analyze usage patterns.</p>
       <ul class="cookie-details-list" style="list-style:none;margin:12px 0;padding:0;font-size:13px;line-height:1.6;">
         <li style="margin-bottom:8px;display:flex;align-items:center;">
           <input checked id="cookie-system-tools" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
@@ -332,7 +332,7 @@
           <label for="cookie-analytics" style="cursor:pointer;color:#e2e8f0;">Performance Analytics: Optimizes electrical portfolio layouts and loading speeds based on safe, anonymous traffic metrics.</label>
         </li>
       </ul>
-      <p class="cookie-text">By clicking “Accept”, you consent to our secure privacy architecture parameters. Review details via our <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html"><i class="fas fa-cookie-bite"></i> Cookies Policy</a>.</p>
+      <p class="cookie-text">By clicking "Accept", you consent to our secure privacy architecture parameters. Review details via our <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html" target="_blank">Cookie Policy</a>.</p>
       <div class="cookie-actions">
         <button type="button" class="cookie-btn btn-accept" id="acceptCookieBtn"><i class="fas fa-check-circle"></i> Accept</button>
         <button type="button" class="cookie-btn btn-decline" id="declineCookieBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.12)"><i class="fas fa-xmark"></i> Decline</button>
@@ -410,13 +410,121 @@
       </div>
 
       <div class="mt-6 text-sm text-slate-600">
-        <p>“We Don’t Just Wire Buildings — We Power Dreams.”</p>
+        <p>"We Don't Just Wire Buildings — We Power Dreams."</p>
         <p class="mt-2">© <span id="currentYear"></span> TNSE ELECTRICAL PROJECTS. Reg. No: 2017/417275/07 | All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- Scripts: UI behaviors (mobile menu, theme toggle, counters, forms, cookie) -->
- 
+  <script src="main.js"></script>
+  <script>
+    // Footer year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle (simple)
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function(){
+      const nav = document.querySelector('nav');
+      if (nav) nav.classList.toggle('hidden');
+    });
+
+    // Theme toggle (light/dark)
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      // store preference
+      try { localStorage.setItem('tnse_theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); } catch(e) {}
+    }
+    (function(){
+      try {
+        const theme = localStorage.getItem('tnse_theme');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch(e){}
+    })();
+
+    // Cookie consent handlers
+    (function () {
+      const banner = document.getElementById('cookieConsentBanner');
+      const acceptBtn = document.getElementById('acceptCookieBtn');
+      const declineBtn = document.getElementById('declineCookieBtn');
+
+      function hideBanner() { if (banner) banner.style.display = 'none'; }
+
+      function setConsent(value) {
+        try { localStorage.setItem('tnse_cookie_consent', JSON.stringify(value)); } catch(e){}
+      }
+
+      try {
+        const consent = JSON.parse(localStorage.getItem('tnse_cookie_consent'));
+        if (consent && consent.accepted) hideBanner();
+      } catch(e) { /* ignore */ }
+
+      acceptBtn?.addEventListener('click', function(){
+        setConsent({ accepted: true, timestamp: Date.now() });
+        hideBanner();
+      });
+      declineBtn?.addEventListener('click', function(){
+        setConsent({ accepted: false, timestamp: Date.now() });
+        hideBanner();
+      });
+    })();
+
+    // Consultation / Contact form: placeholder sending via EmailJS (replace IDs)
+    (function(){
+      const form = document.getElementById('consultationForm');
+      const resp = document.getElementById('formResponse');
+      if (!form) return;
+
+      // Initialize emailjs with your user ID if you want to use it
+      try {
+        if (window.emailjs && !window.emailjs._initialized) {
+          // emailjs.init('YOUR_EMAILJS_USER_ID'); // <-- set your EmailJS user id here
+          window.emailjs._initialized = true;
+        }
+      } catch(e){}
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        resp.textContent = 'Sending...';
+        // If using EmailJS, you'd call emailjs.sendForm(serviceID, templateID, form)
+        // For now simulate
+        setTimeout(function(){
+          resp.textContent = 'Message sent — we will get back to you shortly.';
+          form.reset();
+        }, 900);
+      });
+    })();
+
+    // Footer subscribe: simple placeholder
+    (function(){
+      const form = document.getElementById('footerSubscribeForm');
+      const msg = document.getElementById('subscribeMsg');
+      if (!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        msg.textContent = 'Thanks — we will notify you by email.';
+        form.reset();
+      });
+    })();
+
+    // Simple counter animation helper for elements with data-target
+    (function(){
+      const counters = document.querySelectorAll('[data-target]');
+      if (!counters.length) return;
+      counters.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target') || '0', 10);
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 60));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.textContent = target;
+            clearInterval(timer);
+          } else {
+            el.textContent = current;
+          }
+        }, 16);
+      });
+    })();
+  </script>
 </body>
 </html>
