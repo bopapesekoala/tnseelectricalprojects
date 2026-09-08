@@ -161,295 +161,401 @@
 </div>
 
   <!-- Header -->
-<header class="header">
-    <div class="header-row container" role="navigation">
+<header class="sticky top-0 z-50 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20" role="navigation">
         
-        <div class="header-left">
-            <div class="logo">
-                <a class="logo-link" href="https://tnseelectricalprojects.blogspot.com">
-                    <img alt="Logo" class="logo-img logo-light" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png">
-                    <img alt="Logo Dark" class="logo-img logo-dark" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1742312419/IMG-20250318-WA0002_y0kzfs_Circle_hklus3.jpg">
-                </a>
-            </div>
+        <!-- Logo Section -->
+        <div class="flex-shrink-0 flex items-center">
+            <a class="block relative" href="https://tnseelectricalprojects.blogspot.com">
+                <img alt="Logo" class="h-12 w-auto object-contain dark:hidden" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png">
+                <img alt="Logo Dark" class="h-12 w-auto object-contain hidden dark:block" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1742312419/IMG-20250318-WA0002_y0kzfs_Circle_hklus3.jpg">
+            </a>
         </div>
 
-        <div class="header-right">
-            <ul class="main-menu" id="nav-menu">
-                <li class="menu-item"><a href="https://tnseelectricalprojects.blogspot.com/#hero"><i class="fas fa-home"></i> Home</a></li>
-                <li class="menu-item"><a href="https://tnseelectricalprojects.blogspot.com/#about"><i class="fas fa-info-circle"></i> About</a></li>
+        <!-- Navigation Right -->
+        <div class="flex items-center space-x-4">
+            <ul class="hidden lg:flex items-center space-x-6" id="nav-menu">
+                <li>
+                    <a href="https://tnseelectricalprojects.blogspot.com/#hero" class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-colors duration-200 flex items-center gap-2">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tnseelectricalprojects.blogspot.com/#about" class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-colors duration-200 flex items-center gap-2">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
 
                 <!-- ELECTRICAL MEGA MENU -->
-                <li class="mega-menu">
-                    <a class="mega-menu-trigger" href="#services">
-                        <i class="fas fa-bolt"></i> Electrical <span class="arrow-indicator">+</span>
+                <li class="group static">
+                    <a href="#services" class="text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-amber-500 py-6 transition-colors duration-200 flex items-center gap-1.5">
+                        <i class="fas fa-bolt text-amber-500"></i> Electrical <span class="text-xs transition-transform duration-200 group-hover:rotate-45">+</span>
                     </a>
-                    <div class="mega-menu-wrapper">
-                        <div class="mega-seo-row hide-mobile">
-                            <p>
-                                Your trusted partner for electrical and solar energy solutions.
-                                From small repairs to large-scale installations, we power homes,
-                                businesses, and industries with safety, efficiency, and reliability.
-                            </p>
-                        </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute left-0 top-full w-full bg-white dark:bg-slate-900 shadow-2xl border-t border-slate-100 dark:border-slate-800 hidden group-hover:block transition-all duration-300">
+                        <div class="max-w-7xl mx-auto p-6 sm:p-8">
+                            <div class="hidden sm:block pb-6 mb-6 border-b border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                <p>
+                                    Your trusted partner for electrical and solar energy solutions.
+                                    From small repairs to large-scale installations, we power homes,
+                                    businesses, and industries with safety, efficiency, and reliability.
+                                </p>
+                            </div>
 
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-industry"></i> Industrial Solutions</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/plant-maintenance.html">
-                                <i class="fa-solid fa-industry"></i> Plant Maintenance
-                                <span>Proactive upkeep and electrical troubleshooting for industrial facilities.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/heavy-machinery-wiring.html">
-                                <i class="fa-solid fa-gears"></i> Heavy Machinery Wiring
-                                <span>High-voltage installations and specialized cabling for heavy equipment.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/control-systems.html">
-                                <i class="fa-solid fa-microchip"></i> Control Systems
-                                <span>Automation, PLC programming, and smart relay monitoring solutions.</span>
-                            </a>
-                        </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                                <!-- Col 1 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-industry text-amber-500"></i> Industrial
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/plant-maintenance.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-industry text-xs"></i> Plant Maintenance
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Proactive upkeep and electrical troubleshooting for facilities.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/heavy-machinery-wiring.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-gears text-xs"></i> Heavy Machinery Wiring
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">High-voltage installations & specialized cabling.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/control-systems.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-microchip text-xs"></i> Control Systems
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Automation, PLC programming, smart relays.</span>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-house-lightning"></i> Residential Services</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/new-installations.html">
-                                <i class="fa-solid fa-house-medical-circle-check"></i> New Installations
-                                <span>Complete residential and industrial electrical setups.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/fault-finding.html">
-                                <i class="fa-solid fa-magnifying-glass-chart"></i> Fault Finding
-                                <span>Advanced diagnostics and precision circuit troubleshooting.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/renovations.html">
-                                <i class="fa-solid fa-trowel-bricks"></i> Renovations
-                                <span>Modernizing existing electrical infrastructure and lighting.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/rewiring.html">
-                                <i class="fa-solid fa-plug-circle-bolt"></i> Rewiring
-                                <span>Full system cable replacements for safety and efficiency.</span>
-                            </a>
-                        </div>
+                                <!-- Col 2 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-house-lightning text-amber-500"></i> Residential
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/new-installations.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-house-medical-circle-check text-xs"></i> New Installations
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Complete electrical setups.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/fault-finding.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-magnifying-glass-chart text-xs"></i> Fault Finding
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Diagnostics & troubleshooting.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/renovations.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-trowel-bricks text-xs"></i> Renovations
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Modernizing infrastructure.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/rewiring.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-plug-circle-bolt text-xs"></i> Rewiring
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Full cable replacements.</span>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-building-shield"></i> Commercial Services</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/office-fit-outs.html">
-                                <i class="fa-solid fa-building-user"></i> Office Fit-outs
-                                <span>Professional power &amp; lighting for modern workspaces.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/retail-electrical.html">
-                                <i class="fa-solid fa-store"></i> Retail Electrical
-                                <span>Customized shopfront lighting and display power solutions.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/emergency-lighting.html">
-                                <i class="fa-solid fa-lightbulb-on"></i> Emergency Lighting
-                                <span>Safety-compliant backup lighting systems for commercial sites.</span>
-                            </a>
-                        </div>
+                                <!-- Col 3 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-building-shield text-amber-500"></i> Commercial
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/office-fit-outs.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-building-user text-xs"></i> Office Fit-outs
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Power & lighting setups.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/retail-electrical.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-store text-xs"></i> Retail Electrical
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Shopfront display lighting.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/emergency-lighting.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-lightbulb-on text-xs"></i> Emergency Lighting
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Compliant backup solutions.</span>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-briefcase-bolt"></i> Contracting Support</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/electrical-sub-contracting.html">
-                                <i class="fa-solid fa-file-signature"></i> Sub-contracting
-                                <span>Reliable support for primary contractors and large-scale sites.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/project-collaboration.html">
-                                <i class="fa-solid fa-handshake-angle"></i> Collaboration
-                                <span>Partnering with engineers and firms for seamless execution.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/compliance.html">
-                                <i class="fa-solid fa-certificate"></i> Compliance
-                                <span>Adhering to safety standards and certified industry regulations.</span>
-                            </a>
-                        </div>
+                                <!-- Col 4 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-briefcase-bolt text-amber-500"></i> Contracting
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/electrical-sub-contracting.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-file-signature text-xs"></i> Sub-contracting
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Support for primary sites.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/project-collaboration.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-handshake-angle text-xs"></i> Collaboration
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Engineering partnership.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/compliance.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-certificate text-xs"></i> Compliance
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Safety standards adherence.</span>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-microchip-bolt"></i> Specialized Services</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/electrical-inspections.html">
-                                <i class="fa-solid fa-clipboard-check"></i> Inspections
-                                <span>Comprehensive safety assessments and COC certifications.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/energy-efficiency-audits.html">
-                                <i class="fa-solid fa-chart-simple"></i> Efficiency Audits
-                                <span>Analyze and optimize power consumption to reduce monthly costs.</span>
-                            </a>
-                        </div>
+                                <!-- Col 5 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-microchip-bolt text-amber-500"></i> Specialized
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/electrical-inspections.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-clipboard-check text-xs"></i> Inspections
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Safety & COC certificates.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/energy-efficiency-audits.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-chart-simple text-xs"></i> Efficiency Audits
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Optimize power consumption.</span>
+                                        </a>
+                                    </div>
+                                </div>
 
-                        <div class="mega-menu-col">
-                            <div class="promo-column">
-                                <h4><i class="fa-solid fa-plug-circle-bolt"></i> Need an Electrician?</h4>
-                                <p>Licensed, insured, and ready to help with any job, big or small.</p>
-                                <a class="btn-cta" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
-                                    <i class="fa-solid fa-calendar-check"></i> Book a Service
-                                    <span>Schedule your appointment today</span>
-                                </a>
+                                <!-- Promo Box -->
+                                <div class="bg-amber-500/10 dark:bg-amber-500/20 p-4 rounded-xl border border-amber-500/30 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-sm font-bold text-amber-600 dark:text-amber-400 flex items-center gap-2 mb-2">
+                                            <i class="fa-solid fa-plug-circle-bolt"></i> Need an Electrician?
+                                        </h4>
+                                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Licensed, insured, and ready to help with any job.</p>
+                                    </div>
+                                    <a class="inline-flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs py-2.5 px-3 rounded-lg shadow transition-colors" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
+                                        <i class="fa-solid fa-calendar-check"></i> Book a Service
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
 
                 <!-- SOLAR MEGA MENU -->
-                <li class="mega-menu">
-                    <a class="mega-menu-trigger" href="#solar">
-                        <i class="fas fa-sun"></i> Solar <span class="arrow-indicator">+</span>
+                <li class="group static">
+                    <a href="#solar" class="text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-amber-500 py-6 transition-colors duration-200 flex items-center gap-1.5">
+                        <i class="fas fa-sun text-amber-500"></i> Solar <span class="text-xs transition-transform duration-200 group-hover:rotate-45">+</span>
                     </a>
-                    <div class="mega-menu-wrapper">
-                        <div class="mega-seo-row hide-mobile">
-                            <p>
-                                Take control of your energy future. Lower costs, cut your carbon footprint,
-                                and power your home or business with professional solar solutions built to last.
-                            </p>
-                        </div>
-                        
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-house-solar"></i> Residential Solar Solutions</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/rooftop-solar-panel-installation.html">
-                                <i class="fa-solid fa-solar-panel"></i> Rooftop Solar Panel Installation
-                                <span>Efficient residential and industrial solar mountings.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/hybrid-solar-grid-tied-systems.html">
-                                <i class="fa-solid fa-leaf"></i> Hybrid Solar + Grid-Tied Systems
-                                <span>Combine solar power with grid reliability.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/off-grid-solar-power-setups.html">
-                                <i class="fa-solid fa-tower-broadcast"></i> Off-Grid Solar Power
-                                <span>Complete energy independence for remote areas.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/home-solar-battery-storage.html">
-                                <i class="fa-solid fa-battery-full"></i> Home Solar Battery Storage
-                                <span>Backup solutions to keep your home running 24/7.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-water-heating-systems.html">
-                                <i class="fa-solid fa-faucet-vertical"></i> Solar Water Heating Systems
-                                <span>Eco-friendly hot water solutions for your family.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/system-monitoring-maintenance.html">
-                                <i class="fa-solid fa-gauge-high"></i> System Monitoring &amp; Maintenance
-                                <span>Real-time tracking and professional upkeep.</span>
-                            </a>
-                        </div>
-                        
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-solar-panel"></i> Commercial &amp; Industrial Solar</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/large-scale-solar-plant-design.html">
-                                <i class="fa-solid fa-drafting-compass"></i> Solar Plant Design
-                                <span>Professional layout and engineering for large-scale solar farms.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/grid-tied-solar-systems-for-businesses.html">
-                                <i class="fa-solid fa-on-grid"></i> Grid-Tied Systems
-                                <span>Efficient grid integration for commercial and industrial setups.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-power-purchase-agreements-ppas.html">
-                                <i class="fa-solid fa-file-invoice-dollar"></i> PPAs
-                                <span>Custom Power Purchase Agreements to lower energy costs.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/energy-audits-optimization.html">
-                                <i class="fa-solid fa-magnifying-glass-chart"></i> Energy Audits
-                                <span>Comprehensive analysis and optimization of your energy usage.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/ev-charging-station-integration.html">
-                                <i class="fa-solid fa-charging-station"></i> EV Charging
-                                <span>Smart integration of Electric Vehicle charging infrastructure.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/backup-power-ups-solutions.html">
-                                <i class="fa-solid fa-car-battery"></i> Backup Power &amp; UPS
-                                <span>Reliable battery storage and UPS solutions for zero downtime.</span>
-                            </a>
-                        </div>
-                        
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance &amp; Support</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/panel-cleaning-performance-optimization.html">
-                                <i class="fa-solid fa-sparkles"></i> Panel Cleaning
-                                <span>Maximize efficiency with professional debris and dust removal.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/inverter-repairs-replacements.html">
-                                <i class="fa-solid fa-screwdriver-wrench"></i> Inverter Repairs
-                                <span>Expert diagnostics and hardware restoration for your power system.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/battery-system-maintenance.html">
-                                <i class="fa-solid fa-battery-quarter"></i> Battery Maintenance
-                                <span>Ensure long-term storage health and cycle performance optimization.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/system-upgrades-expansions.html">
-                                <i class="fa-solid fa-arrow-up-right-dots"></i> System Upgrades
-                                <span>Scale your solar capacity with the latest high-efficiency modules.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/247-technical-support-monitoring.html">
-                                <i class="fa-solid fa-headset"></i> 24/7 Support
-                                <span>Real-time system monitoring and immediate technical assistance.</span>
-                            </a>
-                        </div>
-                        
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-microchip"></i> Specialized Solar Solutions</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/rural-off-grid-electrification-projects.html">
-                                <i class="fa-solid fa-mountain-city"></i> Rural Electrification
-                                <span>Sustainable power solutions for remote and off-grid communities.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-powered-streetlights-security.html">
-                                <i class="fa-solid fa-lightbulb-on"></i> Streetlights &amp; Security
-                                <span>Advanced solar lighting for public safety and property protection.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-water-pumping-systems-for-farms.html">
-                                <i class="fa-solid fa-faucet-drip"></i> Water Pumping
-                                <span>Efficient irrigation and livestock watering via solar energy.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/mobile-solar-power-units.html">
-                                <i class="fa-solid fa-truck-bolt"></i> Mobile Units
-                                <span>Portable energy systems for rapid deployment and site work.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/custom-energy-consulting-feasibility.html">
-                                <i class="fa-solid fa-lightbulb-gear"></i> Energy Consulting
-                                <span>Expert feasibility studies and tailored energy strategy plans.</span>
-                            </a>
-                        </div>
-                        
-                        <div class="mega-menu-col">
-                            <h5><i class="fa-solid fa-gears"></i> Additional Services</h5>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/free-site-assessment-energy-audit.html">
-                                <i class="fa-solid fa-file-invoice"></i> Free Assessment
-                                <span>Get a professional energy audit and site evaluation.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/financing-flexible-payment-options.html">
-                                <i class="fa-solid fa-comments-dollar"></i> Financing Options
-                                <span>Flexible payment plans tailored to your budget.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/permit-licensing-compliance-assistance.html">
-                                <i class="fa-solid fa-stamp"></i> Permits &amp; Compliance
-                                <span>We handle the paperwork and licensing for you.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/warranty-after-sales-support.html">
-                                <i class="fa-solid fa-shield-check"></i> Warranty Support
-                                <span>Long-term protection and dedicated technical help.</span>
-                            </a>
-                            <a href="https://tnseelectricalprojects.blogspot.com/p/smart-home-integration-with-solar.html">
-                                <i class="fa-solid fa-house-laptop"></i> Smart Integration
-                                <span>Connect your solar system to your smart home.</span>
-                            </a>
-                        </div>
+                    <!-- Dropdown Content -->
+                    <div class="absolute left-0 top-full w-full bg-white dark:bg-slate-900 shadow-2xl border-t border-slate-100 dark:border-slate-800 hidden group-hover:block transition-all duration-300">
+                        <div class="max-w-7xl mx-auto p-6 sm:p-8">
+                            <div class="hidden sm:block pb-6 mb-6 border-b border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                <p>
+                                    Take control of your energy future. Lower costs, cut your carbon footprint,
+                                    and power your home or business with professional solar solutions built to last.
+                                </p>
+                            </div>
 
-                        <div class="mega-menu-col">
-                            <div class="promo-column">
-                                <h4><i class="fa-solid fa-leaf"></i> Go Green, Save Money</h4>
-                                <p>Get a free estimate and see how much you can save with solar power.</p>
-                                <a class="btn-cta btn-solar" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
-                                    <i class="fa-solid fa-sun-plant-wilt"></i>
-                                    <div class="btn-text-wrapper">
-                                        <span class="main-text">Get a Free Quote</span>
-                                        <span class="sub-text">Residential &amp; Industrial Solutions</span>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                                <!-- Solar Col 1 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-house-solar text-amber-500"></i> Residential
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/rooftop-solar-panel-installation.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-solar-panel text-xs"></i> Rooftop Solar
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Efficient panel mountings.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/hybrid-solar-grid-tied-systems.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-leaf text-xs"></i> Hybrid Systems
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Solar + grid integration.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/off-grid-solar-power-setups.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-tower-broadcast text-xs"></i> Off-Grid Solar
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Complete power independence.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/home-solar-battery-storage.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-battery-full text-xs"></i> Battery Storage
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">24/7 backup power setups.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/solar-water-heating-systems.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-faucet-vertical text-xs"></i> Solar Geysers
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Eco-friendly water heating.</span>
+                                        </a>
                                     </div>
-                                </a>
+                                </div>
+
+                                <!-- Solar Col 2 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-solar-panel text-amber-500"></i> Commercial
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/large-scale-solar-plant-design.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-drafting-compass text-xs"></i> Solar Plant Design
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Large-scale solar engineering.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/grid-tied-solar-systems-for-businesses.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-on-grid text-xs"></i> Grid-Tied Business
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Commercial solar integration.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/solar-power-purchase-agreements-ppas.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-file-invoice-dollar text-xs"></i> PPAs
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Power Purchase Agreements.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/ev-charging-station-integration.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-charging-station text-xs"></i> EV Charging
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Smart charger integration.</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Solar Col 3 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-screwdriver-wrench text-amber-500"></i> Maintenance
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/panel-cleaning-performance-optimization.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-sparkles text-xs"></i> Panel Cleaning
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Maximize energy output.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/inverter-repairs-replacements.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-screwdriver-wrench text-xs"></i> Inverter Repairs
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Diagnostics & restoration.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/battery-system-maintenance.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-battery-quarter text-xs"></i> Battery Care
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Storage health & cycling.</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Solar Col 4 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-microchip text-amber-500"></i> Specialized
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/rural-off-grid-electrification-projects.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-mountain-city text-xs"></i> Rural Power
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Remote community setups.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/solar-water-pumping-systems-for-farms.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-faucet-drip text-xs"></i> Water Pumping
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Solar-powered irrigation.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/mobile-solar-power-units.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-truck-bolt text-xs"></i> Mobile Units
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Portable power stations.</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Solar Col 5 -->
+                                <div class="space-y-3">
+                                    <h5 class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2 border-b pb-2 dark:border-slate-800">
+                                        <i class="fa-solid fa-gears text-amber-500"></i> Additional
+                                    </h5>
+                                    <div class="space-y-2">
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/free-site-assessment-energy-audit.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-file-invoice text-xs"></i> Free Assessment
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Site evaluations.</span>
+                                        </a>
+                                        <a href="https://tnseelectricalprojects.blogspot.com/p/financing-flexible-payment-options.html" class="group/item block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                            <div class="text-sm font-semibold text-slate-800 dark:text-slate-200 group-hover/item:text-amber-500 flex items-center gap-1.5">
+                                                <i class="fa-solid fa-comments-dollar text-xs"></i> Financing
+                                            </div>
+                                            <span class="text-xs text-slate-500 dark:text-slate-400 block mt-0.5">Flexible payment plans.</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Solar Promo Box -->
+                                <div class="bg-amber-500/10 dark:bg-amber-500/20 p-4 rounded-xl border border-amber-500/30 flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="text-sm font-bold text-amber-600 dark:text-amber-400 flex items-center gap-2 mb-2">
+                                            <i class="fa-solid fa-leaf"></i> Go Green, Save Money
+                                        </h4>
+                                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-4">Get a free estimate and see how much you can save.</p>
+                                    </div>
+                                    <a class="inline-flex items-center justify-center gap-2 w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs py-2.5 px-3 rounded-lg shadow transition-colors" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
+                                        <i class="fa-solid fa-sun-plant-wilt"></i> Get Free Quote
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
 
-                <li class="menu-item"><a href="https://tnseblogger.blogspot.com"><i class="fas fa-blog"></i> Blog</a></li>
-                <li class="menu-item"><a href="https://tnseelectricalprojects.blogspot.com/#contact-section-container"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li class="menu-item"><a class="btn-quote" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">Get Quote</a></li>
+                <li>
+                    <a href="https://tnseblogger.blogspot.com" class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-colors duration-200 flex items-center gap-2">
+                        <i class="fas fa-blog"></i> Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tnseelectricalprojects.blogspot.com/#contact-section-container" class="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-amber-500 transition-colors duration-200 flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+                <li>
+                    <a class="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold text-xs py-2 px-4 rounded-full shadow transition-all duration-200 transform hover:-translate-y-0.5" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
+                        Get Quote
+                    </a>
+                </li>
             </ul>
 
-            <div class="hamburger" id="hamburger">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </div>
+            <!-- Mobile Hamburger Button -->
+            <button class="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" id="hamburger" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
         </div>
     </div>
 </header>
