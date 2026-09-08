@@ -1,4 +1,3 @@
-<script type='text/javascript'>
 document.addEventListener('DOMContentLoaded', () => {
     // Select Core Elements
     const hamburger = document.getElementById('hamburger');
@@ -757,5 +756,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })();
-
-</script>
