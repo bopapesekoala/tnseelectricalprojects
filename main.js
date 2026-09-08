@@ -498,82 +498,85 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 8. FAQ DATA & ENGINE ---
 const faqData = [
-    { question: "What’s the difference between a three-pronged plug and a two-pronged plug?", answer: "The third prong is a grounding prong. It provides additional protection for the electrical system and prevents electrical shock." },
-    { question: "Why do my circuit breakers keep tripping?", answer: "A breaker trips when too much power is being used on the circuit (overload), or if there’s a wiring problem (short circuit) or faulty appliance." },
-    { question: "What is a GFCI and what does it do?", answer: "GFCI (Ground Fault Circuit Interrupter) is an outlet with “test” and “reset” buttons. It shuts off the circuit if it detects current imbalance, preventing shocks." },
-    { question: "Should I do my own electrical wiring?", answer: "No. In South Africa it’s illegal for unqualified persons to do domestic wiring. It’s a safety risk and violates building codes and insurance." },
-    { question: "How often should I have my electrical system inspected?", answer: "A full inspection is recommended every 10 years, or every 5 years for rental properties." },
-    { question: "What should I do if an appliance keeps blowing a fuse?", answer: "Unplug it. If it’s the only device, the appliance may be faulty. If others also trip the fuse, the circuit is likely overloaded." },
-    { question: "Why won’t my circuit breaker reset?", answer: "It could signal a wiring fault or short circuit. Call a qualified electrician immediately." },
-    { question: "What is the benefit of whole-house surge protection?", answer: "It protects all appliances and electronics from surges caused by lightning or grid overloads." },
-    { question: "What’s the difference between a blown fuse and a tripped breaker?", answer: "A blown fuse must be replaced. A breaker can simply be reset once the problem is fixed." },
-    { question: "Is it safe to use an extension cord in the rain?", answer: "No. Moisture makes outdoor cords unsafe, raising risks of fire and electric shock." }
+  { question: "What’s the difference between a three-pronged plug and a two-pronged plug?", answer: "The third prong is a grounding prong. It provides additional protection for the electrical system and prevents electrical shock." },
+  { question: "Why do my circuit breakers keep tripping?", answer: "A breaker trips when too much power is being used on the circuit (overload), or if there’s a wiring problem (short circuit) or faulty appliance." },
+  { question: "What is a GFCI and what does it do?", answer: "GFCI (Ground Fault Circuit Interrupter) is an outlet with “test” and “reset” buttons. It shuts off the circuit if it detects current imbalance, preventing shocks." },
+  { question: "Should I do my own electrical wiring?", answer: "No. In South Africa it’s illegal for unqualified persons to do domestic wiring. It’s a safety risk and violates building codes and insurance." },
+  { question: "How often should I have my electrical system inspected?", answer: "A full inspection is recommended every 10 years, or every 5 years for rental properties." },
+  { question: "What should I do if an appliance keeps blowing a fuse?", answer: "Unplug it. If it’s the only device, the appliance may be faulty. If others also trip the fuse, the circuit is likely overloaded." },
+  { question: "Why won’t my circuit breaker reset?", answer: "It could signal a wiring fault or short circuit. Call a qualified electrician immediately." },
+  { question: "What is the benefit of whole-house surge protection?", answer: "It protects all appliances and electronics from surges caused by lightning or grid overloads." },
+  { question: "What’s the difference between a blown fuse and a tripped breaker?", answer: "A blown fuse must be replaced. A breaker can simply be reset once the problem is fixed." },
+  { question: "Is it safe to use an extension cord in the rain?", answer: "No. Moisture makes outdoor cords unsafe, raising risks of fire and electric shock." }
 ];
 
 const initFaqAccordion = () => {
-    const faqContainer = document.getElementById('faqAccordion');
-    if (!faqContainer) return;
+  const faqContainer = document.getElementById('faqAccordion');
+  if (!faqContainer) return;
 
-    faqContainer.innerHTML = ''; 
+  faqContainer.innerHTML = ''; 
 
-    // Render FAQ items with Tailwind utility classes
-    faqData.forEach((item, index) => {
-        const faqItem = document.createElement('div');
-        faqItem.className = 'faq-item border-b border-slate-200 py-3 transition-all duration-300';
-        faqItem.style.transitionDelay = `${index * 0.1}s`;
+  // Render Dark Card-style Accordion Items
+  faqData.forEach((item, index) => {
+    const faqItem = document.createElement('div');
+    faqItem.className = 'faq-item bg-slate-900/80 border border-slate-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-slate-700 shadow-sm';
+    faqItem.style.transitionDelay = `${index * 0.05}s`;
 
-        faqItem.innerHTML = `
-            <button 
-                type="button" 
-                class="faq-question w-full flex justify-between items-center text-left text-slate-800 hover:text-amber-600 font-semibold py-2 focus:outline-none transition-colors duration-200" 
-                aria-expanded="false" 
-                aria-controls="faq-ans-${index}" 
-                id="faq-btn-${index}"
-            >
-                <span class="flex items-center gap-2 pointer-events-none text-base">
-                    <i class="fas fa-question-circle text-amber-500"></i> ${item.question}
-                </span>
-                <i class="fas fa-chevron-down text-slate-400 transform transition-transform duration-300 pointer-events-none text-sm"></i>
-            </button>
-            <div 
-                id="faq-ans-${index}" 
-                role="region" 
-                aria-labelledby="faq-btn-${index}" 
-                class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out text-sm text-slate-600"
-            >
-                <p class="pt-2 pb-1 leading-relaxed">${item.answer}</p>
-            </div>
-        `;
-        faqContainer.appendChild(faqItem);
+    faqItem.innerHTML = `
+      <button 
+        type="button" 
+        class="faq-question w-full flex justify-between items-center text-left text-slate-100 hover:text-amber-400 font-semibold p-5 focus:outline-none transition-colors duration-200" 
+        aria-expanded="false" 
+        aria-controls="faq-ans-${index}" 
+        id="faq-btn-${index}"
+      >
+        <span class="flex items-center gap-3 pointer-events-none text-base sm:text-lg">
+          <i class="fas fa-question-circle text-amber-400 text-lg shrink-0"></i>
+          <span>${item.question}</span>
+        </span>
+        <i class="fas fa-chevron-down text-slate-400 transform transition-transform duration-300 pointer-events-none text-sm shrink-0 ml-4"></i>
+      </button>
+      <div 
+        id="faq-ans-${index}" 
+        role="region" 
+        aria-labelledby="faq-btn-${index}" 
+        class="faq-answer overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out text-slate-300"
+      >
+        <p class="px-5 pb-5 pt-0 leading-relaxed text-sm sm:text-base text-slate-400 border-t border-slate-800/50 mt-1 pt-4">
+          ${item.answer}
+        </p>
+      </div>
+    `;
+    faqContainer.appendChild(faqItem);
+  });
+
+  // Toggle logic with smooth max-height dynamic calculation
+  const questions = faqContainer.querySelectorAll('.faq-question');
+
+  questions.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.fa-chevron-down');
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+      // Close all active accordions
+      questions.forEach(otherHeader => {
+        const otherContent = otherHeader.nextElementSibling;
+        const otherIcon = otherHeader.querySelector('.fa-chevron-down');
+
+        otherHeader.setAttribute('aria-expanded', 'false');
+        if (otherIcon) otherIcon.classList.remove('rotate-180', 'text-amber-400');
+        if (otherContent) otherContent.style.maxHeight = null;
+      });
+
+      // Expand clicked accordion item if previously closed
+      if (!isExpanded) {
+        header.setAttribute('aria-expanded', 'true');
+        if (icon) icon.classList.add('rotate-180', 'text-amber-400');
+        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+      }
     });
-
-    // Accordion Toggle Logic
-    const questions = faqContainer.querySelectorAll('.faq-question');
-
-    questions.forEach(header => {
-        header.addEventListener('click', () => {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('.fa-chevron-down');
-            const isExpanded = header.getAttribute('aria-expanded') === 'true';
-
-            // Close all open items
-            questions.forEach(otherHeader => {
-                const otherContent = otherHeader.nextElementSibling;
-                const otherIcon = otherHeader.querySelector('.fa-chevron-down');
-
-                otherHeader.setAttribute('aria-expanded', 'false');
-                if (otherIcon) otherIcon.classList.remove('rotate-180');
-                if (otherContent) otherContent.style.maxHeight = null;
-            });
-
-            // Toggle selected item
-            if (!isExpanded) {
-                header.setAttribute('aria-expanded', 'true');
-                if (icon) icon.classList.add('rotate-180');
-                if (content) content.style.maxHeight = content.scrollHeight + 'px';
-            }
-        });
-    });
+  });
 };
 
 document.addEventListener('DOMContentLoaded', initFaqAccordion);
