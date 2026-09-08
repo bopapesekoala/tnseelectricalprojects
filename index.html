@@ -1264,108 +1264,188 @@
     </div>
   </div>
 </section>
-  <!-- Cookie Consent Banner -->
-  <section id="cookie-popup-section" class="cookie-consent-layout" aria-hidden="true">
-    <div class="cookie-consent-banner" id="cookieConsentBanner" role="dialog" aria-labelledby="cookieHeader" aria-describedby="cookieText">
-      <h3 class="cookie-header" id="cookieHeader"><i class="fas fa-cookie-bite"></i> Cookie &amp; Privacy Notice</h3>
-      <p class="cookie-text" id="cookieText">TNSE Electrical Projects uses cookies and secure local storage mechanisms to enhance your digital experience across our platforms. These essential files help us remember your preferences and analyze usage patterns.</p>
-      <ul class="cookie-details-list" style="list-style:none;margin:12px 0;padding:0;font-size:13px;line-height:1.6;">
-        <li style="margin-bottom:8px;display:flex;align-items:center;">
-          <input checked id="cookie-system-tools" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
-          <label for="cookie-system-tools" style="cursor:pointer;color:#e2e8f0;">System Tools: Saves your input data inside our solar savings, load metrics, and ROI calculation tools.</label>
-        </li>
-        <li style="margin-bottom:8px;display:flex;align-items:center;">
-          <input checked id="cookie-interface" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
-          <label for="cookie-interface" style="cursor:pointer;color:#e2e8f0;">Interface Settings: Remembers user interface configurations, including your selected Dark Mode / Light Mode style toggles.</label>
-        </li>
-        <li style="margin-bottom:8px;display:flex;align-items:center;">
-          <input id="cookie-analytics" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
-          <label for="cookie-analytics" style="cursor:pointer;color:#e2e8f0;">Performance Analytics: Optimizes electrical portfolio layouts and loading speeds based on safe, anonymous traffic metrics.</label>
-        </li>
-      </ul>
-      <p class="cookie-text">By clicking "Accept", you consent to our secure privacy architecture parameters. Review details via our <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html" target="_blank">Cookie Policy</a>.</p>
-      <div class="cookie-actions">
-        <button type="button" class="cookie-btn btn-accept" id="acceptCookieBtn"><i class="fas fa-check-circle"></i> Accept</button>
-        <button type="button" class="cookie-btn btn-decline" id="declineCookieBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.12)"><i class="fas fa-xmark"></i> Decline</button>
+<!-- Cookie & Privacy Notice Banner -->
+<div id="cookieConsentBanner" class="fixed bottom-4 left-4 right-4 z-50 max-w-xl rounded-xl border border-slate-700 bg-slate-900 p-6 text-slate-100 shadow-2xl md:left-auto md:right-6 md:w-full">
+  <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-white">
+    <i class="fas fa-cookie-bite text-amber-500"></i> Cookie & Privacy Notice
+  </h3>
+  <p class="mb-4 text-xs leading-relaxed text-slate-300">
+    TNSE Electrical Projects uses cookies and secure local storage mechanisms to enhance your digital experience across our platforms. These essential files help us process your requests safely:
+  </p>
+  <ul class="mb-4 space-y-2 text-xs text-slate-300">
+    <li class="flex items-start gap-2.5">
+      <input type="checkbox" id="cookie-system-tools" checked class="mt-0.5 h-4 w-4 rounded border-slate-700 bg-slate-800 text-amber-500 focus:ring-amber-500 cursor-pointer" />
+      <label for="cookie-system-tools" class="cursor-pointer text-slate-200">
+        <strong class="font-semibold text-white">System Tools:</strong> Saves your input data inside our solar savings, load metrics, and ROI calculation tools.
+      </label>
+    </li>
+    <li class="flex items-start gap-2.5">
+      <input type="checkbox" id="cookie-interface" checked class="mt-0.5 h-4 w-4 rounded border-slate-700 bg-slate-800 text-amber-500 focus:ring-amber-500 cursor-pointer" />
+      <label for="cookie-interface" class="cursor-pointer text-slate-200">
+        <strong class="font-semibold text-white">Interface Settings:</strong> Remembers user interface configurations, including your selected Dark Mode / Light Mode style toggles.
+      </label>
+    </li>
+    <li class="flex items-start gap-2.5">
+      <input type="checkbox" id="cookie-analytics" class="mt-0.5 h-4 w-4 rounded border-slate-700 bg-slate-800 text-amber-500 focus:ring-amber-500 cursor-pointer" />
+      <label for="cookie-analytics" class="cursor-pointer text-slate-200">
+        <strong class="font-semibold text-white">Performance Analytics:</strong> Optimizes electrical portfolio layouts and loading speeds based on safe, anonymous traffic metrics.
+      </label>
+    </li>
+  </ul>
+  <p class="mb-4 text-xs text-slate-300">
+    By clicking “Accept”, you consent to our secure privacy architecture parameters. Review details via our 
+    <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html" class="inline-flex items-center gap-1 font-medium text-amber-400 hover:text-amber-300 underline underline-offset-2">
+      <i class="fas fa-cookie-bite"></i> Cookies Policy
+    </a>.
+  </p>
+  <div class="flex justify-end">
+    <button onclick="acceptCookieConsent()" class="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2 text-xs font-semibold text-slate-950 transition hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+      <i class="fas fa-check-circle"></i> Accept
+    </button>
+  </div>
+</div>
+
+<!-- Main Corporate Footer -->
+<footer class="bg-slate-950 text-slate-300">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Grid Columns -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+      
+      <!-- Col 1: Address & Logo -->
+      <div class="space-y-4">
+        <a href="https://tnseelectricalprojects.blogspot.com" class="inline-block">
+          <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" alt="tnseelectricalprojects Logo" class="h-10 w-auto dark:hidden" />
+          <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1742312419/IMG-20250318-WA0002_y0kzfs_Circle_hklus3.jpg" alt="tnseelectricalprojects Logo Dark" class="hidden h-10 w-auto rounded-full dark:block" />
+        </a>
+        <h4 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white">
+          <i class="fas fa-map-marker-alt text-amber-500"></i> Address
+        </h4>
+        <address class="text-xs not-italic leading-relaxed text-slate-400">
+          Stand no 914, Crv street, Kwena moloto 2, Moletjie, Polokwane, Limpopo, South Africa, 0751
+        </address>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="space-y-4">
+        <h4 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white">
+          <i class="fas fa-link text-amber-500"></i> Meet Team
+        </h4>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="https://joetestgantshe.blogspot.com" class="inline-flex items-center gap-2 text-slate-400 transition hover:text-amber-400">
+              <i class="fas fa-home w-4 text-center"></i> Gantshe Malatji
+            </a>
+          </li>
+          <li>
+            <a href="https://fransmathakga.blogspot.com" class="inline-flex items-center gap-2 text-slate-400 transition hover:text-amber-400">
+              <i class="fas fa-briefcase w-4 text-center"></i> Frans Mathakga
+            </a>
+          </li>
+          <li>
+            <a href="https://tnseblogger.blogspot.com" class="inline-flex items-center gap-2 text-slate-400 transition hover:text-amber-400">
+              <i class="fas fa-rss w-4 text-center"></i> TNSE Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Social Connectivity Handles -->
+      <div class="space-y-4">
+        <h4 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white">
+          <i class="fas fa-share-alt text-amber-500"></i> Connect
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          <a href="https://t.me/tnse_electrical" target="_blank" title="Telegram" class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-300 transition hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950">
+            <i class="fab fa-telegram-plane text-sm"></i>
+          </a>
+          <a href="https://www.tiktok.com/@tnse_electrical" target="_blank" title="TikTok" class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-300 transition hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950">
+            <i class="fab fa-tiktok text-sm"></i>
+          </a>
+          <a href="https://tnseelectricalprojects.blogspot.com/p/youtube-channel.html" target="_blank" title="YouTube" class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-300 transition hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950">
+            <i class="fab fa-youtube text-sm"></i>
+          </a>
+          <a href="https://www.facebook.com/tnse.electrical" target="_blank" title="Facebook" class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-300 transition hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950">
+            <i class="fab fa-facebook-f text-sm"></i>
+          </a>
+          <a href="https://www.instagram.com/tnse_electrical" target="_blank" title="Instagram" class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-300 transition hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950">
+            <i class="fab fa-instagram text-sm"></i>
+          </a>
+          <a href="https://x.com/tnse_electrical" target="_blank" title="X (Twitter)" class="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-900 text-slate-300 transition hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950">
+            <i class="fab fa-twitter text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 4: CRM Capture Elements -->
+      <div class="space-y-4">
+        <h4 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white">
+          <i class="fas fa-user-plus text-amber-500"></i> Stay Updated
+        </h4>
+        <form class="space-y-2">
+          <input type="email" placeholder="Your Email Address" required class="w-full rounded-lg border border-slate-800 bg-slate-900 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500" />
+          <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-amber-500 px-4 py-2 text-xs font-semibold text-slate-950 transition hover:bg-amber-400">
+            <i class="fas fa-paper-plane"></i> Subscribe
+          </button>
+        </form>
+      </div>
+
+      <!-- Col 5: Company Info -->
+      <div class="space-y-4">
+        <h4 class="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-white">
+          <i class="fas fa-building text-amber-500"></i> Company Info
+        </h4>
+        <div class="space-y-1 text-xs text-slate-400">
+          <p class="font-semibold text-white">TNSE Electrical Projects</p>
+          <p>Active Enterprise</p>
+          <p class="pt-2"><strong>Reg:</strong> 2017/417275/07</p>
+          <p><strong>BEE:</strong> Level 1 Contributor</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="my-8 border-t border-slate-800"></div>
+
+    <!-- Legal & Developer Info -->
+    <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <div class="flex flex-wrap justify-center gap-4 text-xs text-slate-400">
+        <a href="https://tnseelectricalprojects.blogspot.com/p/privacy-policy.html" class="inline-flex items-center gap-1.5 transition hover:text-amber-400">
+          <i class="fas fa-user-secret"></i> Privacy Policy
+        </a>
+        <a href="https://tnseelectricalprojects.blogspot.com/p/terms-of-service.html" class="inline-flex items-center gap-1.5 transition hover:text-amber-400">
+          <i class="fas fa-file-contract"></i> Terms of Service
+        </a>
+        <a href="https://tnseelectricalprojects.blogspot.com/p/disclaimer.html" class="inline-flex items-center gap-1.5 transition hover:text-amber-400">
+          <i class="fas fa-circle-exclamation"></i> Disclaimer
+        </a>
+        <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html" class="inline-flex items-center gap-1.5 transition hover:text-amber-400">
+          <i class="fas fa-cookie-bite"></i> Cookies
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs text-slate-400">
+        <span>Developed by:</span>
+        <a href="https://itech-u.blogspot.com" target="_blank" title="iTech-U" class="inline-block transition hover:opacity-80">
+          <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1765936527/copilot_image_1765908460899_xkcqrz.png" alt="Developer Logo" class="h-6 w-auto rounded" />
+        </a>
+        <a href="https://sekoaladanielbopape.blogspot.com" target="_blank" title="Developer Profile" class="text-slate-400 transition hover:text-amber-400">
+          <i class="fas fa-code"></i>
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer id="custom-footer-section" class="main-footer bg-white mt-10">
-    <div class="container mx-auto px-6 py-8">
-      <div class="grid md:grid-cols-5 gap-6">
-        <div>
-          <a class="logo-link inline-flex items-center gap-3" href="https://tnseelectricalprojects.blogspot.com">
-            <img alt="logo" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" class="h-10 w-10 rounded">
-            <span class="font-semibold">TNSE ELECTRICAL</span>
-          </a>
-          <h4 class="mt-4"><i class="fas fa-map-marker-alt"></i> Address</h4>
-          <address class="not-italic text-sm">Stand no 914, Crv street, Kwena moloto 2, Moletjie, Polokwane, Limpopo, South Africa, 0751</address>
-        </div>
-
-        <div>
-          <h4><i class="fas fa-link"></i> Meet Team</h4>
-          <ul class="mt-2 space-y-2 text-sm">
-            <li><a href="https://joetestgantshe.blogspot.com"><i class="fas fa-home"></i> Gantshe Malatji</a></li>
-            <li><a href="https://fransmathakga.blogspot.com"><i class="fas fa-briefcase"></i> Frans Mathakga</a></li>
-            <li><a href="https://tnseblogger.blogspot.com"><i class="fas fa-rss"></i> TNSE Blog</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4><i class="fas fa-share-alt"></i> Connect</h4>
-          <div class="flex gap-3 mt-2">
-            <a href="https://t.me/tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
-            <a href="https://www.tiktok.com/@tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com/@tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com/tnse.electrical" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
-          </div>
-        </div>
-
-        <div>
-          <h4><i class="fas fa-user-plus"></i> Stay Updated</h4>
-          <form id="footerSubscribeForm" class="mt-2">
-            <input type="email" name="subscribeEmail" placeholder="Your Email Address" required class="border px-3 py-2 rounded w-full" />
-            <button type="submit" class="mt-2 bg-primary text-white px-3 py-2 rounded"><i class="fas fa-paper-plane"></i> Subscribe</button>
-          </form>
-          <div id="subscribeMsg" class="text-sm text-slate-600 mt-2" aria-live="polite"></div>
-        </div>
-
-        <div>
-          <h4><i class="fas fa-building"></i> Company Info</h4>
-          <p class="font-semibold">TNSE Electrical Projects</p>
-          <p class="text-sm">Active Enterprise</p>
-          <p class="text-sm mt-2"><strong>Reg:</strong> 2017/417275/07</p>
-          <p class="text-sm"><strong>BEE:</strong> Level 1 Contributor</p>
-        </div>
-      </div>
-
-      <div class="mt-8 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-        <div class="legal-section text-sm">
-          <a href="https://tnseelectricalprojects.blogspot.com/p/privacy-policy.html" class="mr-4"><i class="fas fa-user-secret"></i> Privacy Policy</a>
-          <a href="https://tnseelectricalprojects.blogspot.com/p/terms-of-service.html" class="mr-4"><i class="fas fa-file-contract"></i> Terms</a>
-          <a href="https://tnseelectricalprojects.blogspot.com/p/disclaimer.html" class="mr-4"><i class="fas fa-circle-exclamation"></i> Disclaimer</a>
-          <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a>
-        </div>
-
-        <div class="developer-info text-sm">
-          <span>Developed by:</span>
-          <a href="https://itech-u.blogspot.com" target="_blank" rel="noopener" title="iTech-U" class="inline-flex items-center ml-2">
-            <img alt="Developer Logo" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1765936527/copilot_image_1765908460899_xkcqrz.png" style="height:25px; border-radius:4px; margin-right:6px;">
-            iTech-U
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-6 text-sm text-slate-600">
-        <p>"We Don't Just Wire Buildings — We Power Dreams."</p>
-        <p class="mt-2">© <span id="currentYear"></span> TNSE ELECTRICAL PROJECTS. Reg. No: 2017/417275/07 | All Rights Reserved.</p>
+    <!-- Copyright & Tagline -->
+    <div class="mt-8 border-t border-slate-900 pt-6 text-center text-xs text-slate-500">
+      <p class="italic text-slate-400">“We Don’t Just Wire Buildings — We Power Dreams.”</p>
+      <div class="mt-3 space-y-1">
+        <p>© 2026 <strong class="font-semibold text-slate-300">TNSE ELECTRICAL PROJECTS</strong></p>
+        <p class="text-[11px] text-slate-600">Reg. No: 2017/417275/07 | All Rights Reserved.</p>
       </div>
     </div>
-  </footer>
+
+  </div>
+</footer>
 
   <!-- Scripts: UI behaviors (mobile menu, theme toggle, counters, forms, cookie) -->
   <script src="main.js"></script>
