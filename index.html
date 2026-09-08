@@ -560,35 +560,222 @@
     </div>
 </header>
 
-  <!-- HERO -->
-  <section id="home" class="bg-gradient-to-r from-slate-50 to-white py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-3xl md:text-5xl font-bold mb-4">Reliable Electrical & Solar Solutions</h1>
-      <p class="text-slate-600 max-w-2xl mx-auto mb-8">Professional residential, commercial and industrial electrical services with sustainable solar installations and off-grid solutions.</p>
-      <div class="flex justify-center gap-4">
-        <a href="#services" class="bg-primary text-white px-6 py-3 rounded-md">Our Services</a>
-        <a href="#contact-section-container" class="border border-slate-300 px-6 py-3 rounded-md">Request a Quote</a>
-      </div>
-    </div>
-  </section>
+<!-- HERO SECTION -->
+<section id="hero" class="relative bg-slate-900 text-white overflow-hidden py-20 lg:py-28">
+  <!-- Carousel Background & Overlay -->
+  <div class="hero-carousel-container absolute inset-0 z-0"></div>
+  <div class="hero-overlay absolute inset-0 bg-slate-950/75 z-0"></div>
 
-  <!-- ABOUT -->
-  <section id="about" class="container mx-auto px-6 py-16">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-2xl font-semibold mb-4">About TNSE Electrical Projects</h2>
-        <p class="text-slate-600 mb-4">TNSE provides planning, engineering and installation of solar PV systems, off-grid storage and hybrid backup setups along with full electrical contracting services including household and commercial wiring, distribution boards, fault-finding and emergency repairs.</p>
-        <ul class="space-y-2 text-slate-700">
-          <li><i class="fa fa-check-circle text-primary mr-2"></i>Experienced certified electricians</li>
-          <li><i class="fa fa-check-circle text-primary mr-2"></i>Solar PV design & installation</li>
-          <li><i class="fa fa-check-circle text-primary mr-2"></i>Off-grid systems & battery storage</li>
-        </ul>
+  <div class="hero-container relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="hero-content max-w-3xl">
+      <!-- Badge -->
+      <span class="hero-badge fade-init fade-down delay-1 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6">
+        <i class="fa-solid fa-bolt-lightning text-amber-400"></i> South Africa's Trusted Energy Partners
+      </span>
+
+      <!-- Title -->
+      <h1 class="reverse-reveal fade-out-up text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mb-6">
+        Powering Your Future with <span class="text-accent text-amber-400">Precision Engineering</span>
+      </h1>
+
+      <!-- Dynamic Subtitle -->
+      <p class="fade-init fade-right delay-3 text-lg sm:text-xl text-slate-300 min-h-[1.75rem] mb-8">
+        <span id="typed"></span>
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="hero-btns fade-init fade-up delay-4 flex flex-col sm:flex-row gap-4 mb-16">
+        <a class="hero-btn primary inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold transition-all duration-200 shadow-lg shadow-amber-500/25" href="https://tnseelectricalprojects.blogspot.com/p/home.html#contact-section-container">
+          <i class="fa-solid fa-calendar-check"></i> Book a Free Site Audit
+        </a>
+        <a class="hero-btn secondary inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 transition-all duration-200" href="https://tnseelectricalprojects.blogspot.com/p/solar-powered-streetlights-security.html">
+          <i class="fa-solid fa-solar-panel text-amber-400"></i> Explore Solar
+        </a>
       </div>
-      <div>
-        <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1746687315/IMG-20250320-WA0002_uftswb.jpg" alt="TNSE team" class="rounded-lg shadow" />
+
+      <!-- Stats Grid -->
+      <div class="hero-stats grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-800">
+        <div class="stat-item fade-init fade-up delay-1">
+          <strong class="block text-2xl sm:text-3xl font-extrabold text-white">
+            <span class="counter" data-target="10">0</span>+
+          </strong>
+          <span class="text-sm text-slate-400 font-medium">Years Experience</span>
+        </div>
+
+        <div class="stat-item fade-init fade-up delay-2">
+          <strong class="block text-2xl sm:text-3xl font-extrabold text-white">
+            <span class="counter" data-target="100">0</span>%
+          </strong>
+          <span class="text-sm text-slate-400 font-medium">Licensed &amp; Insured</span>
+        </div>
+
+        <div class="stat-item fade-init fade-up delay-3">
+          <strong class="block text-2xl sm:text-3xl font-extrabold text-white">
+            <span class="counter" data-target="24">0</span>/7
+          </strong>
+          <span class="text-sm text-slate-400 font-medium">Technical Support</span>
+        </div>
+
+        <div class="stat-item fade-init fade-up delay-3">
+          <strong class="block text-2xl sm:text-3xl font-extrabold text-white">COC</strong>
+          <span class="text-sm text-slate-400 font-medium">Compliant Service</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section-wrapper bg-slate-50 py-20 lg:py-28 text-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+    <!-- Main About Grid -->
+    <div class="about-container grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Media Side -->
+      <div class="about-image-side fade-init fade-right relative lg:col-span-5">
+        <div class="experience-badge absolute -top-4 -left-4 z-20 bg-amber-500 text-slate-950 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center min-w-[100px]">
+          <strong class="text-3xl font-black leading-none">
+            <span class="counter" data-target="10">0</span>+
+          </strong>
+          <span class="text-xs font-bold uppercase tracking-wider mt-1 text-center">Years Experience</span>
+        </div>
+        
+        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+          <img class="w-full h-auto object-cover aspect-[4/3]" alt="TNSE Electrical Team" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1746687315/IMG-20250320-WA0002_uftswb.jpg" />
+        </div>
+        
+        <div class="image-accent-box absolute -bottom-4 -right-4 w-full h-full border-2 border-amber-500 rounded-2xl z-0 pointer-events-none"></div>
+      </div>
+
+      <!-- Content Side -->
+      <div class="about-text-side fade-init fade-left lg:col-span-7">
+        <span class="sub-heading text-amber-600 font-bold uppercase tracking-wider text-xs block mb-2">About TNSE Electrical Projects</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-4">
+          Leading the Charge in <span class="text-accent text-amber-600">Sustainable Power</span>
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed">
+          Based in South Africa, TNSE Electrical Projects is your partner in energy evolution. We bridge the gap between traditional electrical excellence and the future of renewable solar technology.
+        </p>
+
+        <!-- Accordion Box -->
+        <div class="accordion-right fade-init fade-up delay-1 bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2 mb-6">
+            <i class="fas fa-gem text-amber-500"></i> Our Values
+          </h2>
+          
+          <div class="acc-container divide-y divide-slate-100 mb-6">
+            <div class="acc-item py-3">
+              <div class="acc-header flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors">
+                <h3 class="text-base">Integrity</h3>
+                <span class="text-lg font-bold text-slate-400">+</span>
+              </div>
+              <div class="acc-content hidden pt-2 text-sm text-slate-600">
+                <p>Operates with honesty and transparency in every project phase.</p>
+              </div>
+            </div>
+
+            <div class="acc-item py-3">
+              <div class="acc-header flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors">
+                <h3 class="text-base">Quality &amp; Precision</h3>
+                <span class="text-lg font-bold text-slate-400">+</span>
+              </div>
+              <div class="acc-content hidden pt-2 text-sm text-slate-600">
+                <p>Delivers superior solutions through meticulous detail and high standards.</p>
+              </div>
+            </div>
+
+            <div class="acc-item py-3">
+              <div class="acc-header flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors">
+                <h3 class="text-base">Safety First</h3>
+                <span class="text-lg font-bold text-slate-400">+</span>
+              </div>
+              <div class="acc-content hidden pt-2 text-sm text-slate-600">
+                <p>Prioritizes the well-being of the team, clients, and community.</p>
+              </div>
+            </div>
+
+            <div class="acc-item py-3">
+              <div class="acc-header flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors">
+                <h3 class="text-base">Customer Empowerment</h3>
+                <span class="text-lg font-bold text-slate-400">+</span>
+              </div>
+              <div class="acc-content hidden pt-2 text-sm text-slate-600">
+                <p>Dedicated to fulfilling client needs for lasting peace of mind.</p>
+              </div>
+            </div>
+
+            <div class="acc-item py-3">
+              <div class="acc-header flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors">
+                <h3 class="text-base">Teamwork &amp; Dedication</h3>
+                <span class="text-lg font-bold text-slate-400">+</span>
+              </div>
+              <div class="acc-content hidden pt-2 text-sm text-slate-600">
+                <p>Fosters a collaborative environment inspired by the founders' vision.</p>
+              </div>
+            </div>
+
+            <div class="acc-item py-3">
+              <div class="acc-header flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors">
+                <h3 class="text-base">Community Investment</h3>
+                <span class="text-lg font-bold text-slate-400">+</span>
+              </div>
+              <div class="acc-content hidden pt-2 text-sm text-slate-600">
+                <p>Committed to community well-being through responsible services.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://tnseelectricalprojects.blogspot.com/p/gallery.html" class="cta-link inline-flex items-center gap-2 text-amber-600 font-bold hover:text-amber-700 transition-colors">
+            <i class="fas fa-book-open"></i> See Our Values in Action
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extras Grid & Brands -->
+    <div class="about-extras space-y-12">
+      <!-- Mission & Vision -->
+      <div class="mission-vision-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="extra-box fade-init fade-up delay-1 bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+          <div class="extra-icon text-3xl text-amber-500 mb-4">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-2">Our Mission</h4>
+          <p class="text-slate-600 leading-relaxed">Delivering high-precision engineering and safety-certified installations that empower homes and industries with reliable power.</p>
+        </div>
+
+        <div class="extra-box fade-init fade-up delay-2 bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+          <div class="extra-icon text-3xl text-amber-500 mb-4">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-2">Our Vision</h4>
+          <p class="text-slate-600 leading-relaxed">To be South Africa's first choice for integrated electrical solutions, driving the transition to a sustainable, power-independent future.</p>
+        </div>
+      </div>
+
+      <!-- Brands Ticker -->
+      <div class="brands-slider fade-init fade-up delay-3 text-center bg-white py-8 px-4 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+        <span class="brands-title text-xs font-bold uppercase tracking-widest text-slate-400 mb-6 block">Certified Installers of Top-Tier Brands</span>
+        <div class="logo-wrapper overflow-hidden relative">
+          <div class="logo-track flex items-center justify-around flex-wrap gap-8 font-black text-slate-400 text-lg sm:text-xl">
+            <div class="logo-item hover:text-slate-800 transition-colors">SUNSYNK</div>
+            <div class="logo-item hover:text-slate-800 transition-colors">VICTRON</div>
+            <div class="logo-item hover:text-slate-800 transition-colors">DEYE</div>
+            <div class="logo-item hover:text-slate-800 transition-colors">PYLONTECH</div>
+            <div class="logo-item hover:text-slate-800 transition-colors">GROWATT</div>
+            <div class="logo-item hover:text-slate-800 transition-colors">CANADIAN SOLAR</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="about-final-cta fade-init fade-up delay-4 text-center pt-4">
+        <a class="about-link inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold transition-all duration-200 shadow-md" href="https://tnseelectricalprojects.blogspot.com/p/gallery.html">
+          Explore Our Project Portfolio <i class="fa-solid fa-arrow-right text-amber-400"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- SERVICES -->
   <section id="services" class="bg-white py-16">
