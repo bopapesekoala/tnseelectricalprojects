@@ -959,25 +959,28 @@
 </section>
 
 <!-- FAQ SECTION -->
-<section id="faq" class="section-padding parallax-bg bg-slate-950 py-20 lg:py-28 text-white border-t border-slate-800">
-  <div class="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="faq" class="relative bg-slate-950 py-20 lg:py-28 text-white border-t border-slate-800/80 overflow-hidden">
+  <!-- Subtle Background Glow -->
+  <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.05)_0%,transparent_70%)]"></div>
+
+  <div class="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
     <!-- Section Header -->
-    <div class="section-header fade-init fade-down text-center mb-12">
-      <span class="sub-heading text-amber-400 uppercase tracking-widest font-bold text-xs block mb-3">Expert Knowledge</span>
-      <h2 class="section-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-        <i class="fas fa-circle-question text-amber-400 mr-2"></i> Frequently Asked <span class="text-accent text-amber-400">Questions</span>
+    <div class="text-center mb-12 sm:mb-16">
+      <span class="text-amber-400 uppercase tracking-widest font-bold text-xs block mb-3">Expert Knowledge</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+        <i class="fas fa-circle-question text-amber-400 mr-2"></i> Frequently Asked <span class="text-amber-400">Questions</span>
       </h2>
     </div>
 
     <!-- Accordion Mounting Point -->
-    <div id="faqAccordion" class="faq-accordion-container fade-init fade-up delay-1 space-y-4 min-h-[150px]"></div>
+    <div id="faqAccordion" class="space-y-4 min-h-[150px]"></div>
 
     <!-- Footer CTA -->
-    <div class="faq-footer fade-init fade-up delay-2 text-center mt-12 pt-8 border-t border-slate-800/80">
-      <p class="text-slate-400 text-base">
+    <div class="text-center mt-12 sm:mt-16 pt-8 border-t border-slate-800/80">
+      <p class="text-slate-400 text-sm sm:text-base">
         Don't see the answer you're looking for? 
-        <a class="text-amber-400 font-bold hover:underline inline-flex items-center gap-1.5 ml-1" href="https://tnseelectricalprojects.blogspot.com/p/home.html#contact-section-container">
+        <a class="text-amber-400 font-semibold hover:text-amber-300 hover:underline inline-flex items-center gap-1.5 ml-1 transition-colors" href="https://tnseelectricalprojects.blogspot.com/p/home.html#contact-section-container">
           Contact our technical team <i class="fas fa-arrow-right text-xs"></i>
         </a>
       </p>
