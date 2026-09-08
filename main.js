@@ -174,25 +174,21 @@ function closeAllDrawers() {
 }
 
 function handleRedirect(button, url) {
-    // Find the elements within the specific drawer that was clicked
     const drawerContent = button.closest('.drawer-content');
     if (!drawerContent) return;
 
     const img = drawerContent.querySelector('.drawer-illus');
     const textBox = drawerContent.querySelector('.drawer-text-box');
     
-    // 1. Start the Goodbye transition
     if (img) img.style.opacity = '0';
     if (textBox) textBox.style.opacity = '0';
     
     setTimeout(() => {
-        // 2. Switch to Goodbye Illustration
         if (img) {
             img.src = 'https://res.cloudinary.com/dulmfdigk/image/upload/v1776334030/undraw_goodbye_mkv7_ewwgxr.png';
             img.style.opacity = '1';
         }
         
-        // 3. Update the text
         if (textBox) {
             textBox.innerHTML = `
                 <h3>See You Soon!</h3>
@@ -201,7 +197,6 @@ function handleRedirect(button, url) {
             textBox.style.opacity = '1';
         }
         
-        // 4. Final redirect after the user sees the goodbye
         setTimeout(() => {
             window.location.href = url;
         }, 1800);
@@ -211,60 +206,41 @@ function handleRedirect(button, url) {
 
 /**
  * TNSE Electrical Projects - Cookie Consent Engine
- * Handles user privacy preference validation and persistent state tracking.
  */
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialization: Check if user has already interacted with the consent form
     initCookieConsent();
 });
 
-/**
- * Validates storage states and displays the banner if consent is missing.
- */
 function initCookieConsent() {
     const banner = document.getElementById("cookieConsentBanner");
-    
-    // Safety check if the element exists on the current page context
     if (!banner) return;
 
-    // Check if consent tracking key exists in secure local storage
     const hasConsented = localStorage.getItem("tnse_cookie_consent");
 
     if (!hasConsented) {
-        // Subtle 1.5-second timeout delay before displaying for better UX presentation
         setTimeout(() => {
             banner.classList.add("show");
         }, 1500);
     }
 }
 
-/**
- * Extracts checked parameters, maps user selections, and commits preferences to storage.
- * Triggered inline via the onclick attribute inside the HTML button layout node.
- */
 function acceptCookieConsent() {
     const banner = document.getElementById("cookieConsentBanner");
     if (!banner) return;
 
-    // Read states of customizable analytical data matrix preferences
     const analyticsApproved = document.getElementById("cookie-analytics") ? document.getElementById("cookie-analytics").checked : false;
     
-    // System tools and interface choices are implicitly true as they are required core parameters
     const userPreferences = {
         consentGranted: true,
         timestamp: new Date().toISOString(),
         preferences: {
-            systemTools: true, // Crucial for calculators
-            interfaceSettings: true, // Crucial for Dark/Light theme preservation
+            systemTools: true,
+            interfaceSettings: true,
             performanceAnalytics: analyticsApproved
         }
     };
 
-    // Commit preferences object string to persistent client browser storage
     localStorage.setItem("tnse_cookie_consent", JSON.stringify(userPreferences));
-
-    // Instantly hide the component canvas viewport wrapper
     banner.classList.remove("show");
 }
 
@@ -355,17 +331,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- 4. ACCORDION (FIXED SELECTORS) ---
+    // --- 4. GENERAL ACCORDION ---
     document.querySelectorAll('.accordion-header').forEach(button => {
         button.addEventListener('click', () => {
             const accordionItem = button.parentElement;
+            const content = button.nextElementSibling;
+            const isActive = accordionItem.classList.contains('active');
             
             document.querySelectorAll('.accordion-item').forEach(item => {
-                if (item !== accordionItem) {
-                    item.classList.remove('active');
-                }
+                item.classList.remove('active');
+                const itemBtn = item.querySelector('.accordion-header');
+                const itemContent = item.querySelector('.accordion-body, .accordion-content');
+                if (itemBtn) itemBtn.setAttribute('aria-expanded', 'false');
+                if (itemContent) itemContent.style.maxHeight = null;
             });
-            if (accordionItem) accordionItem.classList.toggle('active');
+
+            if (!isActive) {
+                accordionItem.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+                if (content) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            }
         });
     });
 
@@ -392,6 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         accItems.forEach(item => {
             const header = item.querySelector('.acc-header');
+            const body = item.querySelector('.acc-body, .acc-content');
             if (!header) return;
             
             header.addEventListener('click', () => {
@@ -399,12 +387,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 accItems.forEach(otherItem => {
                     otherItem.classList.remove('active');
-                    otherItem.setAttribute('aria-expanded', 'false');
+                    const otherHeader = otherItem.querySelector('.acc-header');
+                    const otherBody = otherItem.querySelector('.acc-body, .acc-content');
+                    if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+                    if (otherBody) otherBody.style.maxHeight = null;
                 });
 
                 if (!isActive) {
                     item.classList.add('active');
-                    item.setAttribute('aria-expanded', 'true');
+                    header.setAttribute('aria-expanded', 'true');
+                    if (body) {
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                    }
                 }
             });
         });
@@ -460,7 +454,7 @@ document.addEventListener("DOMContentLoaded", () => {
             faqItem.className = 'faq-item';
             faqItem.style.transitionDelay = `${index * 0.1}s`;
             faqItem.innerHTML = `
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false">
                     <span><i class="fas fa-question-circle"></i> ${item.question}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
@@ -481,17 +475,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 faqContainer.querySelectorAll('.faq-answer').forEach(ans => {
                     if (ans !== content) {
                         ans.classList.remove('open');
+                        ans.style.maxHeight = null;
                         const nearbyIcon = ans.previousElementSibling.querySelector('.fa-chevron-down');
                         if (nearbyIcon) nearbyIcon.style.transform = 'rotate(0deg)';
+                        ans.previousElementSibling.setAttribute('aria-expanded', 'false');
                     }
                 });
 
                 if (!isOpen) {
                     content.classList.add('open');
+                    content.style.maxHeight = content.scrollHeight + 'px';
                     if (icon) icon.style.transform = 'rotate(180deg)';
+                    header.setAttribute('aria-expanded', 'true');
                 } else {
                     content.classList.remove('open');
+                    content.style.maxHeight = null;
                     if (icon) icon.style.transform = 'rotate(0deg)';
+                    header.setAttribute('aria-expanded', 'false');
                 }
             });
         });
@@ -628,7 +628,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 consultSuccessMsgDiv.innerHTML = "";
             }
 
-            // Maps cleanly to your updated form architecture parameters
             const templateParams = {
                 name: consultationForm.name.value,
                 surname: consultationForm.surname.value,
@@ -693,7 +692,6 @@ const toggleTheme = () => {
     }
 };
 
-// Initial Theme Status Verification
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('tnse-theme');
     const themeBtn = document.querySelector('.btn-theme i');
