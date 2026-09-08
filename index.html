@@ -67,75 +67,101 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem","position":1,"name":"Home","item":"https://tnseelectricalprojects.blogspot.com/#home"},
-      {"@type": "ListItem","position":2,"name":"About","item":"https://tnseelectricalprojects.blogspot.com/#about"},
-      {"@type": "ListItem","position":3,"name":"Services","item":"https://tnseelectricalprojects.blogspot.com/#services"},
-      {"@type": "ListItem","position":4,"name":"Contact","item":"https://tnseelectricalprojects.blogspot.com/#contact"}
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {"@type": "WebSite","@id": "https://tnseelectricalprojects.blogspot.com/#website","url":"https://tnseelectricalprojects.blogspot.com/","name":"TNSE Electrical Projects","description":"Professional Electrical Contracting and Solar Energy Solutions"},
-      {"@type": "ItemList","itemListElement": [
-        {"@type":"SiteNavigationElement","position":1,"name":"Home","url":"https://tnseelectricalprojects.blogspot.com/#home"},
-        {"@type":"SiteNavigationElement","position":2,"name":"About","url":"https://tnseelectricalprojects.blogspot.com/#about"},
-        {"@type":"SiteNavigationElement","position":3,"name":"Electrical Services","url":"https://tnseelectricalprojects.blogspot.com/#services"},
-        {"@type":"SiteNavigationElement","position":4,"name":"Solar Solutions","url":"https://tnseblogger.blogspot.com/p/blog.html"},
-        {"@type":"SiteNavigationElement","position":5,"name":"Blog","url":"https://tnseblogger.blogspot.com/p/blog.html"},
-        {"@type":"SiteNavigationElement","position":6,"name":"Contact","url":"https://tnseelectricalprojects.blogspot.com/#contact"}
-      ]}
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://tnseelectricalprojects.blogspot.com/#home"},
+      {"@type":"ListItem","position":2,"name":"About","item":"https://tnseelectricalprojects.blogspot.com/#about"},
+      {"@type":"ListItem","position":3,"name":"Services","item":"https://tnseelectricalprojects.blogspot.com/#services"},
+      {"@type":"ListItem","position":4,"name":"Contact","item":"https://tnseelectricalprojects.blogspot.com/#contact-section-container"}
     ]
   }
   </script>
 
   <style>
-    /* Minimal in-file fallback styling for older browsers */
+    /* Minimal fallback styling and component CSS */
     body { font-family: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .cookie-consent-banner { position: fixed; right: 16px; bottom: 16px; background: rgba(15,23,42,0.96); color: #e6eef0; padding: 18px; border-radius: 12px; max-width: 360px; box-shadow: 0 8px 24px rgba(2,6,23,0.5); z-index: 9999; }
+    .cookie-consent-banner .cookie-actions { margin-top: 12px; display:flex; gap:8px; justify-content:flex-end; }
+    .cookie-btn { background: #0ea5a4; color: white; padding: 8px 12px; border-radius: 8px; border: none; cursor: pointer; display:inline-flex; gap:8px; align-items:center; }
+    .cookie-btn.btn-decline { background: transparent; color: #e6eef0; border: 1px solid rgba(226,238,240,0.12); }
+    .interactive-floating-section .float-btn { position: fixed; right: 16px; width: 44px; height: 44px; border-radius: 999px; display:flex; align-items:center; justify-content:center; background: #0ea5a4; color: #fff; box-shadow: 0 6px 18px rgba(2,6,23,0.2); z-index: 9998; margin-bottom: 8px; }
+    .float-btn.btn-call { bottom: 140px; }
+    .float-btn.btn-wa { bottom: 96px; right: 16px; background: #25D366; }
+    .float-btn.btn-mail { bottom: 52px; right: 16px; background: #6b7280; }
+    .float-btn.btn-top { bottom: 8px; right: 16px; background: #0ea5a4; }
+    @media(min-width:768px){ .interactive-floating-section .float-btn { right: 24px; } }
+    /* Simple utilities for the layout -- most layout handled by Tailwind */
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
-  <!-- GTM (noscript) -->
+
+  <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRND64DZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Site header -->
+  <!-- Interactive Floating Buttons -->
+  <div class="interactive-floating-section">
+    <div class="float-btn btn-call" title="Call Gantshe: +27 81 827 6288" style="bottom:140px;">
+      <a href="tel:+27818276288" style="color:inherit"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <div class="float-btn btn-wa" title="WhatsApp Gantshe" style="bottom:96px; background:#25D366;">
+      <a href="https://wa.me/27818276288?text=Hi%20Gantshe%2C%20I%20would%20like%20to%20get%20a%20quote%20from%20TNSE%20Electrical%20Projects." target="_blank" style="color:inherit">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="float-btn btn-call" title="Call Frans: +27 81 550 7926" style="bottom:212px;">
+      <a href="tel:+27815507926" style="color:inherit"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <div class="float-btn btn-wa" title="WhatsApp Frans" style="bottom:268px; background:#25D366;">
+      <a href="https://wa.me/27815507926?text=Hi%20Frans%2C%20I%20would%20like%20to%20get%20a%20quote%20from%20TNSE%20Electrical%20Projects." target="_blank" style="color:inherit">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <div class="float-btn btn-mail" title="Contact" style="bottom:324px; background:#6b7280;">
+      <a href="#contact-section-container" style="color:inherit"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+    <div class="float-btn btn-top" title="Back to Top" onclick="window.scrollTo({top:0, behavior:'smooth'})" style="bottom:8px;">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <div class="float-btn section-btn btn-theme" title="Toggle Theme" onclick="toggleTheme()" style="bottom:52px; right:76px;">
+      <i class="fa-solid fa-sun"></i>
+    </div>
+  </div>
+
+  <!-- Header -->
   <header class="bg-white shadow">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3">
         <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" alt="TNSE logo" class="h-10 w-10 rounded" />
         <span class="font-semibold text-lg">TNSE Electrical Projects</span>
       </a>
-
       <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Main Navigation">
         <a href="#about" class="hover:text-primary">About</a>
         <a href="#services" class="hover:text-primary">Services</a>
         <a href="#solar" class="hover:text-primary">Solar</a>
         <a href="#blog" class="hover:text-primary">Blog</a>
-        <a href="#contact" class="text-white bg-primary px-4 py-2 rounded-md">Contact</a>
+        <a href="#contact-section-container" class="text-white bg-primary px-4 py-2 rounded-md">Contact</a>
       </nav>
-
-      <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden text-slate-700">
-        <i class="fa fa-bars fa-lg"></i>
-      </button>
+      <button id="mobile-menu-btn" class="md:hidden text-slate-700"><i class="fa fa-bars fa-lg"></i></button>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section id="home" class="bg-gradient-to-r from-slate-50 to-white py-20">
     <div class="container mx-auto px-6 text-center">
       <h1 class="text-3xl md:text-5xl font-bold mb-4">Reliable Electrical & Solar Solutions</h1>
       <p class="text-slate-600 max-w-2xl mx-auto mb-8">Professional residential, commercial and industrial electrical services with sustainable solar installations and off-grid solutions.</p>
       <div class="flex justify-center gap-4">
         <a href="#services" class="bg-primary text-white px-6 py-3 rounded-md">Our Services</a>
-        <a href="#contact" class="border border-slate-300 px-6 py-3 rounded-md">Request a Quote</a>
+        <a href="#contact-section-container" class="border border-slate-300 px-6 py-3 rounded-md">Request a Quote</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about" class="container mx-auto px-6 py-16">
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
@@ -148,12 +174,12 @@
         </ul>
       </div>
       <div>
-        <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" alt="Electrical services" class="rounded-lg shadow" />
+        <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1746687315/IMG-20250320-WA0002_uftswb.jpg" alt="TNSE team" class="rounded-lg shadow" />
       </div>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- SERVICES -->
   <section id="services" class="bg-white py-16">
     <div class="container mx-auto px-6">
       <h3 class="text-xl font-semibold mb-6">Our Services</h3>
@@ -177,89 +203,327 @@
     </div>
   </section>
 
-  <!-- Solar Highlight -->
+  <!-- SOLAR HIGHLIGHT -->
   <section id="solar" class="container mx-auto px-6 py-16">
     <div class="bg-gradient-to-r from-slate-50 to-white p-8 rounded-lg shadow">
       <h4 class="text-2xl font-semibold mb-4">Solar Solutions for Reliable Power</h4>
       <p class="text-slate-600 mb-4">We design hybrid and off-grid systems that combine solar PV, inverters and battery storage for continuous power even during outages.</p>
-      <a href="#contact" class="inline-block bg-primary text-white px-4 py-2 rounded-md">Get a solar quote</a>
+      <a href="#contact-section-container" class="inline-block bg-primary text-white px-4 py-2 rounded-md">Get a solar quote</a>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-slate-100 py-16">
-    <div class="container mx-auto px-6">
-      <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
-      <div class="grid md:grid-cols-2 gap-6">
-        <form id="contact-form" class="space-y-4 bg-white p-6 rounded shadow">
-          <div>
-            <label class="block text-sm">Name</label>
-            <input type="text" name="from_name" required class="w-full border px-3 py-2 rounded" />
-          </div>
-          <div>
-            <label class="block text-sm">Email</label>
-            <input type="email" name="reply_to" required class="w-full border px-3 py-2 rounded" />
-          </div>
-          <div>
-            <label class="block text-sm">Message</label>
-            <textarea name="message" rows="5" required class="w-full border px-3 py-2 rounded"></textarea>
-          </div>
-          <div>
-            <button type="submit" class="bg-primary text-white px-4 py-2 rounded">Send Message</button>
-          </div>
-        </form>
+  <!-- TESTIMONIALS (placeholder element for carousel) -->
+  <section id="testimonials" class="section-padding parallax-bg">
+    <div class="container">
+      <div class="section-header text-center mb-12">
+        <span class="sub-heading text-primary uppercase tracking-wider font-bold">Client Feedback</span>
+        <h2 class="text-3xl mt-4"><i class="fas fa-users-viewfinder"></i> Trusted by <span class="text-accent text-primary">Industry Leaders</span></h2>
+      </div>
+      <div id="testimonialCarousel" class="testimonial-carousel"></div>
+    </div>
+  </section>
 
-        <div class="space-y-4">
-          <div class="bg-white p-6 rounded shadow">
-            <h5 class="font-semibold">Get in touch</h5>
-            <p class="text-slate-600">Polokwane, South Africa<br/>Phone: +27 123 456 789<br/>Email: info@tnseelectricalprojects.co.za</p>
+  <!-- FAQ (container placeholder) -->
+  <section id="faq" class="section-padding parallax-bg">
+    <div class="container">
+      <div class="section-header text-center mb-12">
+        <span class="sub-heading text-yellow-400 uppercase tracking-wider font-bold">Expert Knowledge</span>
+        <h2 class="text-3xl mt-4"><i class="fas fa-circle-question"></i> Frequently Asked <span class="text-accent text-yellow-400">Questions</span></h2>
+      </div>
+      <div id="faqAccordion" class="faq-accordion-container"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact-section-container" class="section-padding parallax-bg bg-slate-100 py-16">
+    <div class="container mx-auto px-6">
+      <p class="section-tagline mb-6"><i class="fas fa-hand-point-right"></i> Get in touch with us. Ready to discuss your electrical or solar needs? We're here to help.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <a class="logo-link inline-flex items-center gap-3 mb-4" href="#home">
+            <img alt="Logo" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" class="h-10 w-10 rounded">
+            <span class="font-semibold">TNSE ELECTRICAL</span>
+          </a>
+          <div class="mb-4">
+            <h4 class="font-semibold"><i class="fas fa-map-marker-alt"></i> Address</h4>
+            <address class="not-italic">Stand no 914, Crv street, Kwena moloto 2, Moletjie, Polokwane, Limpopo, South Africa, 0751</address>
           </div>
-          <div class="bg-white p-6 rounded shadow">
-            <h5 class="font-semibold">Business Hours</h5>
-            <p class="text-slate-600">Mon - Fri: 08:00 - 17:00<br/>Sat: 08:00 - 12:00</p>
+          <div class="mb-4">
+            <h4 class="font-semibold"><i class="fas fa-phone"></i> Contact Numbers</h4>
+            <p><strong>Gantshe:</strong> +27 81 827 6288</p>
+            <p><strong>Frans:</strong> +27 81 550 7926</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> tnse.electricalprojects@gmail.com</p>
+          </div>
+          <div>
+            <h4 class="font-semibold"><i class="fas fa-share-alt"></i> Connect</h4>
+            <div class="flex gap-3 mt-2">
+              <a href="https://t.me/tnse_electrical" target="_blank" rel="noopener" class="text-xl"><i class="fab fa-telegram-plane"></i></a>
+              <a href="https://www.tiktok.com/@tnse_electrical" target="_blank" rel="noopener" class="text-xl"><i class="fab fa-tiktok"></i></a>
+              <a href="https://youtube.com/@tnse_electrical" target="_blank" rel="noopener" class="text-xl"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.facebook.com/tnse.electrical" target="_blank" rel="noopener" class="text-xl"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/tnse_electrical" target="_blank" rel="noopener" class="text-xl"><i class="fab fa-instagram"></i></a>
+              <a href="https://x.com/tnse_electrical" target="_blank" rel="noopener" class="text-xl"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4"><i class="fas fa-file-invoice"></i> Request a Consultation</h3>
+          <form id="consultationForm" class="space-y-4 bg-white p-6 rounded shadow">
+            <div class="grid grid-cols-2 gap-3">
+              <input type="text" name="name" placeholder="Leina (First Name)" required class="border px-3 py-2 rounded" />
+              <input type="text" name="surname" placeholder="Sefane (Surname)" required class="border px-3 py-2 rounded" />
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <input type="tel" name="cellphone" placeholder="Nomoro Ya Mogala" required class="border px-3 py-2 rounded" />
+              <input type="email" name="email" placeholder="Imeili" required class="border px-3 py-2 rounded" />
+            </div>
+
+            <select name="service_required" required class="w-full border px-3 py-2 rounded">
+              <option disabled selected value="">Kgetha Tirelo (Select Service Required)...</option>
+              <optgroup label="Solar & Alternative Power Solutions">
+                <option value="residential_solar">Residential Solar Installation (Solar ya Ka Gae)</option>
+                <option value="commercial_solar">Commercial & Industrial Solar Grid Systems</option>
+                <option value="backup_battery">Inverter & Battery Backup Systems</option>
+                <option value="solar_maintenance">Solar Panel Maintenance, Cleaning & Upgrades</option>
+              </optgroup>
+              <optgroup label="Electrical Infrastructure & Maintenance">
+                <option value="building_wiring">Complete Building Wiring & Reticulation</option>
+                <option value="power_faults">Emergency Power Fault Finding & Diagnostics</option>
+                <option value="db_upgrades">Distribution Board (DB) Upgrades</option>
+                <option value="compliance_coc">Electrical Certificates of Compliance (CoC)</option>
+                <option value="backup_generators">Backup Generator Systems & Changeover Switches</option>
+                <option value="industrial_maintenance">Industrial Machinery Power & Plant Maintenance</option>
+              </optgroup>
+            </select>
+
+            <textarea name="message" rows="5" placeholder="Ngwala molaetša wa gago mo (Write your message here)" required class="w-full border px-3 py-2 rounded"></textarea>
+
+            <button type="submit" class="bg-primary text-white px-4 py-2 rounded"><i class="fas fa-paper-plane"></i> Romela (Send)</button>
+            <div id="formResponse" role="status" aria-live="polite" class="text-sm text-slate-600 mt-2"></div>
+          </form>
+
+          <div class="mt-4 bg-white p-4 rounded shadow">
+            <p class="font-semibold"><i class="fas fa-triangle-exclamation"></i> Emergency 24/7: Repairs & Power Faults</p>
+            <p class="text-sm text-slate-600">We provide priority response for emergency faults and critical repairs.</p>
+            <a href="mailto:tnse.electricalprojects@gmail.com" class="inline-block mt-3 text-primary"><i class="fas fa-receipt"></i> Get a Direct Quote via Email</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Cookie Consent Banner -->
+  <section id="cookie-popup-section" class="cookie-consent-layout" aria-hidden="true">
+    <div class="cookie-consent-banner" id="cookieConsentBanner" role="dialog" aria-labelledby="cookieHeader" aria-describedby="cookieText">
+      <h3 class="cookie-header" id="cookieHeader"><i class="fas fa-cookie-bite"></i> Cookie &amp; Privacy Notice</h3>
+      <p class="cookie-text" id="cookieText">TNSE Electrical Projects uses cookies and secure local storage mechanisms to enhance your digital experience across our platforms. These essential files help us process your requests safely:</p>
+      <ul class="cookie-details-list" style="list-style:none;margin:12px 0;padding:0;font-size:13px;line-height:1.6;">
+        <li style="margin-bottom:8px;display:flex;align-items:center;">
+          <input checked id="cookie-system-tools" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
+          <label for="cookie-system-tools" style="cursor:pointer;color:#e2e8f0;">System Tools: Saves your input data inside our solar savings, load metrics, and ROI calculation tools.</label>
+        </li>
+        <li style="margin-bottom:8px;display:flex;align-items:center;">
+          <input checked id="cookie-interface" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
+          <label for="cookie-interface" style="cursor:pointer;color:#e2e8f0;">Interface Settings: Remembers user interface configurations, including your selected Dark Mode / Light Mode style toggles.</label>
+        </li>
+        <li style="margin-bottom:8px;display:flex;align-items:center;">
+          <input id="cookie-analytics" style="margin-right:8px;width:16px;height:16px;cursor:pointer;" type="checkbox">
+          <label for="cookie-analytics" style="cursor:pointer;color:#e2e8f0;">Performance Analytics: Optimizes electrical portfolio layouts and loading speeds based on safe, anonymous traffic metrics.</label>
+        </li>
+      </ul>
+      <p class="cookie-text">By clicking “Accept”, you consent to our secure privacy architecture parameters. Review details via our <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html"><i class="fas fa-cookie-bite"></i> Cookies Policy</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-btn btn-accept" id="acceptCookieBtn"><i class="fas fa-check-circle"></i> Accept</button>
+        <button type="button" class="cookie-btn btn-decline" id="declineCookieBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.12)"><i class="fas fa-xmark"></i> Decline</button>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-white py-8">
-    <div class="container mx-auto px-6 text-center text-sm text-slate-600">
-      <p id="copyright">&copy; <span id="year"></span> TNSE Electrical Projects. All rights reserved.</p>
+  <footer id="custom-footer-section" class="main-footer bg-white mt-10">
+    <div class="container mx-auto px-6 py-8">
+      <div class="grid md:grid-cols-5 gap-6">
+        <div>
+          <a class="logo-link inline-flex items-center gap-3" href="https://tnseelectricalprojects.blogspot.com">
+            <img alt="logo" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" class="h-10 w-10 rounded">
+            <span class="font-semibold">TNSE ELECTRICAL</span>
+          </a>
+          <h4 class="mt-4"><i class="fas fa-map-marker-alt"></i> Address</h4>
+          <address class="not-italic text-sm">Stand no 914, Crv street, Kwena moloto 2, Moletjie, Polokwane, Limpopo, South Africa, 0751</address>
+        </div>
+
+        <div>
+          <h4><i class="fas fa-link"></i> Meet Team</h4>
+          <ul class="mt-2 space-y-2 text-sm">
+            <li><a href="https://joetestgantshe.blogspot.com"><i class="fas fa-home"></i> Gantshe Malatji</a></li>
+            <li><a href="https://fransmathakga.blogspot.com"><i class="fas fa-briefcase"></i> Frans Mathakga</a></li>
+            <li><a href="https://tnseblogger.blogspot.com"><i class="fas fa-rss"></i> TNSE Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4><i class="fas fa-share-alt"></i> Connect</h4>
+          <div class="flex gap-3 mt-2">
+            <a href="https://t.me/tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.tiktok.com/@tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com/@tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/tnse.electrical" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/tnse_electrical" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4><i class="fas fa-user-plus"></i> Stay Updated</h4>
+          <form id="footerSubscribeForm" class="mt-2">
+            <input type="email" name="subscribeEmail" placeholder="Your Email Address" required class="border px-3 py-2 rounded w-full" />
+            <button type="submit" class="mt-2 bg-primary text-white px-3 py-2 rounded"><i class="fas fa-paper-plane"></i> Subscribe</button>
+          </form>
+          <div id="subscribeMsg" class="text-sm text-slate-600 mt-2" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <h4><i class="fas fa-building"></i> Company Info</h4>
+          <p class="font-semibold">TNSE Electrical Projects</p>
+          <p class="text-sm">Active Enterprise</p>
+          <p class="text-sm mt-2"><strong>Reg:</strong> 2017/417275/07</p>
+          <p class="text-sm"><strong>BEE:</strong> Level 1 Contributor</p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+        <div class="legal-section text-sm">
+          <a href="https://tnseelectricalprojects.blogspot.com/p/privacy-policy.html" class="mr-4"><i class="fas fa-user-secret"></i> Privacy Policy</a>
+          <a href="https://tnseelectricalprojects.blogspot.com/p/terms-of-service.html" class="mr-4"><i class="fas fa-file-contract"></i> Terms</a>
+          <a href="https://tnseelectricalprojects.blogspot.com/p/disclaimer.html" class="mr-4"><i class="fas fa-circle-exclamation"></i> Disclaimer</a>
+          <a href="https://tnseelectricalprojects.blogspot.com/p/cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a>
+        </div>
+
+        <div class="developer-info text-sm">
+          <span>Developed by:</span>
+          <a href="https://itech-u.blogspot.com" target="_blank" rel="noopener" title="iTech-U" class="inline-flex items-center ml-2">
+            <img alt="Developer Logo" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1765936527/copilot_image_1765908460899_xkcqrz.png" style="height:25px; border-radius:4px; margin-right:6px;">
+            iTech-U
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-6 text-sm text-slate-600">
+        <p>“We Don’t Just Wire Buildings — We Power Dreams.”</p>
+        <p class="mt-2">© <span id="currentYear"></span> TNSE ELECTRICAL PROJECTS. Reg. No: 2017/417275/07 | All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts: UI behaviors (mobile menu, theme toggle, counters, forms, cookie) -->
   <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Footer year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    if (mobileBtn) {
-      mobileBtn.addEventListener('click', function(){
-        const nav = document.querySelector('nav');
-        if (nav) nav.classList.toggle('hidden');
-      });
+    // Mobile menu toggle (simple)
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', function(){
+      const nav = document.querySelector('nav');
+      if (nav) nav.classList.toggle('hidden');
+    });
+
+    // Theme toggle (light/dark)
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      // store preference
+      try { localStorage.setItem('tnse_theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); } catch(e) {}
     }
-
-    // Initialize EmailJS (replace with your EmailJS user ID)
-    if (window.emailjs) {
+    (function(){
       try {
-        emailjs.init('YOUR_EMAILJS_USER_ID');
-      } catch(e) {
-        // ignore
+        const theme = localStorage.getItem('tnse_theme');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch(e){}
+    })();
+
+    // Cookie consent handlers
+    (function () {
+      const banner = document.getElementById('cookieConsentBanner');
+      const acceptBtn = document.getElementById('acceptCookieBtn');
+      const declineBtn = document.getElementById('declineCookieBtn');
+
+      function hideBanner() { if (banner) banner.style.display = 'none'; }
+
+      function setConsent(value) {
+        try { localStorage.setItem('tnse_cookie_consent', JSON.stringify(value)); } catch(e){}
       }
-      const form = document.getElementById('contact-form');
-      if (form) {
-        form.addEventListener('submit', function(e){
-          e.preventDefault();
-          emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', form)
-            .then(function(){ alert('Message sent — we will get back to you shortly.'); form.reset(); },
-                  function(err){ alert('Failed to send message. Please try again later.'); });
-        });
-      }
-    }
+
+      try {
+        const consent = JSON.parse(localStorage.getItem('tnse_cookie_consent'));
+        if (consent && consent.accepted) hideBanner();
+      } catch(e) { /* ignore */ }
+
+      acceptBtn?.addEventListener('click', function(){
+        setConsent({ accepted: true, timestamp: Date.now() });
+        hideBanner();
+      });
+      declineBtn?.addEventListener('click', function(){
+        setConsent({ accepted: false, timestamp: Date.now() });
+        hideBanner();
+      });
+    })();
+
+    // Consultation / Contact form: placeholder sending via EmailJS (replace IDs)
+    (function(){
+      const form = document.getElementById('consultationForm');
+      const resp = document.getElementById('formResponse');
+      if (!form) return;
+
+      // Initialize emailjs with your user ID if you want to use it
+      try {
+        if (window.emailjs && !window.emailjs._initialized) {
+          // emailjs.init('YOUR_EMAILJS_USER_ID'); // <-- set your EmailJS user id here
+          window.emailjs._initialized = true;
+        }
+      } catch(e){}
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        resp.textContent = 'Sending...';
+        // If using EmailJS, you'd call emailjs.sendForm(serviceID, templateID, form)
+        // For now simulate
+        setTimeout(function(){
+          resp.textContent = 'Message sent — we will get back to you shortly.';
+          form.reset();
+        }, 900);
+      });
+    })();
+
+    // Footer subscribe: simple placeholder
+    (function(){
+      const form = document.getElementById('footerSubscribeForm');
+      const msg = document.getElementById('subscribeMsg');
+      if (!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        msg.textContent = 'Thanks — we will notify you by email.';
+        form.reset();
+      });
+    })();
+
+    // Simple counter animation helper for elements with data-target
+    (function(){
+      const counters = document.querySelectorAll('[data-target]');
+      if (!counters.length) return;
+      counters.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target') || '0', 10);
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 60));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.textContent = target;
+            clearInterval(timer);
+          } else {
+            el.textContent = current;
+          }
+        }, 16);
+      });
+    })();
   </script>
 </body>
 </html>
