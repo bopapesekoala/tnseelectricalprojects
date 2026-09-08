@@ -373,37 +373,71 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- 6. VALUES ACCORDION ---
-    const initValuesAccordion = () => {
-        const accItems = document.querySelectorAll('.acc-item');
-        if (accItems.length === 0) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const valuesData = [
+    { title: "Integrity", description: "Operates with honesty and transparency in every project phase." },
+    { title: "Quality & Precision", description: "Delivers superior solutions through meticulous detail and high standards." },
+    { title: "Safety First", description: "Prioritizes the well-being of the team, clients, and community." },
+    { title: "Customer Empowerment", description: "Dedicated to fulfilling client needs for lasting peace of mind." },
+    { title: "Teamwork & Dedication", description: "Fosters a collaborative environment inspired by the founders' vision." },
+    { title: "Community Investment", description: "Committed to community well-being through responsible services." }
+  ];
 
-        accItems.forEach(item => {
-            const header = item.querySelector('.acc-header');
-            const body = item.querySelector('.acc-body, .acc-content');
-            if (!header) return;
-            
-            header.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
+  const container = document.getElementById('acc-container');
+  if (!container) return;
 
-                accItems.forEach(otherItem => {
-                    otherItem.classList.remove('active');
-                    const otherHeader = otherItem.querySelector('.acc-header');
-                    const otherBody = otherItem.querySelector('.acc-body, .acc-content');
-                    if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
-                    if (otherBody) otherBody.style.maxHeight = null;
-                });
+  // Render items with accessibility attributes and dynamic height transition styling
+  container.innerHTML = valuesData.map((item, index) => `
+    <div class="acc-item py-3">
+      <button 
+        type="button" 
+        class="acc-header w-full flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors text-left focus:outline-none" 
+        aria-expanded="false" 
+        aria-controls="acc-content-${index}" 
+        id="acc-header-${index}"
+      >
+        <h3 class="text-base pointer-events-none">${item.title}</h3>
+        <span class="icon text-lg font-bold text-slate-400 pointer-events-none transition-transform duration-200">+</span>
+      </button>
+      <div 
+        id="acc-content-${index}" 
+        role="region" 
+        aria-labelledby="acc-header-${index}" 
+        class="acc-content overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out text-sm text-slate-600"
+      >
+        <p class="pt-2">${item.description}</p>
+      </div>
+    </div>
+  `).join('');
 
-                if (!isActive) {
-                    item.classList.add('active');
-                    header.setAttribute('aria-expanded', 'true');
-                    if (body) {
-                        body.style.maxHeight = body.scrollHeight + 'px';
-                    }
-                }
-            });
-        });
-    };
-    initValuesAccordion();
+  // Attach click listener for toggling items smoothly
+  const headers = container.querySelectorAll('.acc-header');
+
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.icon');
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+      // Close all accordion items
+      headers.forEach(otherHeader => {
+        const otherContent = otherHeader.nextElementSibling;
+        const otherIcon = otherHeader.querySelector('.icon');
+
+        otherHeader.setAttribute('aria-expanded', 'false');
+        if (otherIcon) otherIcon.textContent = '+';
+        if (otherContent) otherContent.style.maxHeight = null;
+      });
+
+      // Open selected item if it was previously closed
+      if (!isExpanded) {
+        header.setAttribute('aria-expanded', 'true');
+        if (icon) icon.textContent = '−';
+        if (content) content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+});
 
     // --- 7. BRAND SLIDER ---
     const initBrandSlider = () => {
