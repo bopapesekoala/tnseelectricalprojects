@@ -174,21 +174,25 @@ function closeAllDrawers() {
 }
 
 function handleRedirect(button, url) {
+    // Find the elements within the specific drawer that was clicked
     const drawerContent = button.closest('.drawer-content');
     if (!drawerContent) return;
 
     const img = drawerContent.querySelector('.drawer-illus');
     const textBox = drawerContent.querySelector('.drawer-text-box');
     
+    // 1. Start the Goodbye transition
     if (img) img.style.opacity = '0';
     if (textBox) textBox.style.opacity = '0';
     
     setTimeout(() => {
+        // 2. Switch to Goodbye Illustration
         if (img) {
             img.src = 'https://res.cloudinary.com/dulmfdigk/image/upload/v1776334030/undraw_goodbye_mkv7_ewwgxr.png';
             img.style.opacity = '1';
         }
         
+        // 3. Update the text
         if (textBox) {
             textBox.innerHTML = `
                 <h3>See You Soon!</h3>
@@ -197,6 +201,7 @@ function handleRedirect(button, url) {
             textBox.style.opacity = '1';
         }
         
+        // 4. Final redirect after the user sees the goodbye
         setTimeout(() => {
             window.location.href = url;
         }, 1800);
@@ -204,45 +209,84 @@ function handleRedirect(button, url) {
     }, 400);
 }
 
+
+
+
+
+
+
+
+
+
 /**
  * TNSE Electrical Projects - Cookie Consent Engine
+ * Handles user privacy preference validation and persistent state tracking.
  */
+
 document.addEventListener("DOMContentLoaded", function () {
+    // Initialization: Check if user has already interacted with the consent form
     initCookieConsent();
 });
 
+/**
+ * Validates storage states and displays the banner if consent is missing.
+ */
 function initCookieConsent() {
     const banner = document.getElementById("cookieConsentBanner");
+    
+    // Safety check if the element exists on the current page context
     if (!banner) return;
 
+    // Check if consent tracking key exists in secure local storage
     const hasConsented = localStorage.getItem("tnse_cookie_consent");
 
     if (!hasConsented) {
+        // Subtle 1.5-second timeout delay before displaying for better UX presentation
         setTimeout(() => {
             banner.classList.add("show");
         }, 1500);
     }
 }
 
+/**
+ * Extracts checked parameters, maps user selections, and commits preferences to storage.
+ * Triggered inline via the onclick attribute inside the HTML button layout node.
+ */
 function acceptCookieConsent() {
     const banner = document.getElementById("cookieConsentBanner");
     if (!banner) return;
 
+    // Read states of customizable analytical data matrix preferences
     const analyticsApproved = document.getElementById("cookie-analytics") ? document.getElementById("cookie-analytics").checked : false;
     
+    // System tools and interface choices are implicitly true as they are required core parameters
     const userPreferences = {
         consentGranted: true,
         timestamp: new Date().toISOString(),
         preferences: {
-            systemTools: true,
-            interfaceSettings: true,
+            systemTools: true, // Crucial for calculators
+            interfaceSettings: true, // Crucial for Dark/Light theme preservation
             performanceAnalytics: analyticsApproved
         }
     };
 
+    // Commit preferences object string to persistent client browser storage
     localStorage.setItem("tnse_cookie_consent", JSON.stringify(userPreferences));
+
+    // Instantly hide the component canvas viewport wrapper
     banner.classList.remove("show");
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * TNSE Electrical Projects - Combined Logic Master Homepage
@@ -331,28 +375,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- 4. GENERAL ACCORDION ---
+    // --- 4. ACCORDION (FIXED SELECTORS) ---
     document.querySelectorAll('.accordion-header').forEach(button => {
         button.addEventListener('click', () => {
             const accordionItem = button.parentElement;
-            const content = button.nextElementSibling;
-            const isActive = accordionItem.classList.contains('active');
             
             document.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-                const itemBtn = item.querySelector('.accordion-header');
-                const itemContent = item.querySelector('.accordion-body, .accordion-content');
-                if (itemBtn) itemBtn.setAttribute('aria-expanded', 'false');
-                if (itemContent) itemContent.style.maxHeight = null;
-            });
-
-            if (!isActive) {
-                accordionItem.classList.add('active');
-                button.setAttribute('aria-expanded', 'true');
-                if (content) {
-                    content.style.maxHeight = content.scrollHeight + 'px';
+                if (item !== accordionItem) {
+                    item.classList.remove('active');
                 }
-            }
+            });
+            if (accordionItem) accordionItem.classList.toggle('active');
         });
     });
 
@@ -373,71 +406,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --- 6. VALUES ACCORDION ---
-document.addEventListener('DOMContentLoaded', () => {
-  const valuesData = [
-    { title: "Integrity", description: "Operates with honesty and transparency in every project phase." },
-    { title: "Quality & Precision", description: "Delivers superior solutions through meticulous detail and high standards." },
-    { title: "Safety First", description: "Prioritizes the well-being of the team, clients, and community." },
-    { title: "Customer Empowerment", description: "Dedicated to fulfilling client needs for lasting peace of mind." },
-    { title: "Teamwork & Dedication", description: "Fosters a collaborative environment inspired by the founders' vision." },
-    { title: "Community Investment", description: "Committed to community well-being through responsible services." }
-  ];
+    const initValuesAccordion = () => {
+        const accItems = document.querySelectorAll('.acc-item');
+        if (accItems.length === 0) return;
 
-  const container = document.getElementById('acc-container');
-  if (!container) return;
+        accItems.forEach(item => {
+            const header = item.querySelector('.acc-header');
+            if (!header) return;
+            
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
 
-  // Render items with accessibility attributes and dynamic height transition styling
-  container.innerHTML = valuesData.map((item, index) => `
-    <div class="acc-item py-3">
-      <button 
-        type="button" 
-        class="acc-header w-full flex justify-between items-center cursor-pointer font-semibold text-slate-800 hover:text-amber-600 transition-colors text-left focus:outline-none" 
-        aria-expanded="false" 
-        aria-controls="acc-content-${index}" 
-        id="acc-header-${index}"
-      >
-        <h3 class="text-base pointer-events-none">${item.title}</h3>
-        <span class="icon text-lg font-bold text-slate-400 pointer-events-none transition-transform duration-200">+</span>
-      </button>
-      <div 
-        id="acc-content-${index}" 
-        role="region" 
-        aria-labelledby="acc-header-${index}" 
-        class="acc-content overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out text-sm text-slate-600"
-      >
-        <p class="pt-2">${item.description}</p>
-      </div>
-    </div>
-  `).join('');
+                accItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.setAttribute('aria-expanded', 'false');
+                });
 
-  // Attach click listener for toggling items smoothly
-  const headers = container.querySelectorAll('.acc-header');
-
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      const icon = header.querySelector('.icon');
-      const isExpanded = header.getAttribute('aria-expanded') === 'true';
-
-      // Close all accordion items
-      headers.forEach(otherHeader => {
-        const otherContent = otherHeader.nextElementSibling;
-        const otherIcon = otherHeader.querySelector('.icon');
-
-        otherHeader.setAttribute('aria-expanded', 'false');
-        if (otherIcon) otherIcon.textContent = '+';
-        if (otherContent) otherContent.style.maxHeight = null;
-      });
-
-      // Open selected item if it was previously closed
-      if (!isExpanded) {
-        header.setAttribute('aria-expanded', 'true');
-        if (icon) icon.textContent = '−';
-        if (content) content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  });
-});
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    };
+    initValuesAccordion();
 
     // --- 7. BRAND SLIDER ---
     const initBrandSlider = () => {
@@ -488,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
             faqItem.className = 'faq-item';
             faqItem.style.transitionDelay = `${index * 0.1}s`;
             faqItem.innerHTML = `
-                <button class="faq-question" aria-expanded="false">
+                <button class="faq-question">
                     <span><i class="fas fa-question-circle"></i> ${item.question}</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
@@ -509,23 +501,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 faqContainer.querySelectorAll('.faq-answer').forEach(ans => {
                     if (ans !== content) {
                         ans.classList.remove('open');
-                        ans.style.maxHeight = null;
                         const nearbyIcon = ans.previousElementSibling.querySelector('.fa-chevron-down');
                         if (nearbyIcon) nearbyIcon.style.transform = 'rotate(0deg)';
-                        ans.previousElementSibling.setAttribute('aria-expanded', 'false');
                     }
                 });
 
                 if (!isOpen) {
                     content.classList.add('open');
-                    content.style.maxHeight = content.scrollHeight + 'px';
                     if (icon) icon.style.transform = 'rotate(180deg)';
-                    header.setAttribute('aria-expanded', 'true');
                 } else {
                     content.classList.remove('open');
-                    content.style.maxHeight = null;
                     if (icon) icon.style.transform = 'rotate(0deg)';
-                    header.setAttribute('aria-expanded', 'false');
                 }
             });
         });
@@ -662,6 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 consultSuccessMsgDiv.innerHTML = "";
             }
 
+            // Maps cleanly to your updated form architecture parameters
             const templateParams = {
                 name: consultationForm.name.value,
                 surname: consultationForm.surname.value,
@@ -726,6 +713,7 @@ const toggleTheme = () => {
     }
 };
 
+// Initial Theme Status Verification
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('tnse-theme');
     const themeBtn = document.querySelector('.btn-theme i');
@@ -787,4 +775,90 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(animateStep);
         });
     }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => runCounterEngine(false));
+    } else {
+        setTimeout(() => runCounterEngine(false), 100); 
+    }
+    window.addEventListener('load', () => runCounterEngine(false));
+
+    const triggerTriggers = ['mouseover', 'click'];
+    triggerTriggers.forEach(eventType => {
+        document.addEventListener(eventType, function(e) {
+            if (e.target && e.target.closest && (e.target.closest('[data-target]') || e.target.closest('.stat-item') || e.target.closest('.mega-menu-wrapper'))) {
+                runCounterEngine(true);
+            }
+        });
+    });
+
+    if (typeof MutationObserver !== 'undefined') {
+        const engineObserver = new MutationObserver((mutations) => {
+            for (let mutation of mutations) {
+                if (mutation.attributeName === 'class' || mutation.attributeName === 'style') {
+                    runCounterEngine(true);
+                    break;
+                }
+            }
+        });
+        
+        const megaWrapper = document.querySelector('.mega-menu-wrapper');
+        if (megaWrapper) {
+            engineObserver.observe(megaWrapper, { attributes: true, attributeFilter: ['class', 'style'] });
+        }
+        engineObserver.observe(document.body, { attributes: true, attributeFilter: ['class', 'style'] });
+    }
 })();
+
+/* ============================================================
+   TNSE BI-DIRECTIONAL SCROLL ENGINE (CONSOLIDATED OVERSEER)
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    const scrollOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px"
+    };
+
+    const bidirectionalEngine = new IntersectionObserver((entries) => {
+        const itemsEntering = entries.filter(entry => entry.isIntersecting);
+
+        itemsEntering.forEach((entry, index) => {
+            const target = entry.target;
+
+            if (target.classList.contains('service-card')) {
+                target.style.transitionDelay = `${index * 0.12}s`;
+                target.classList.add('reveal-active');
+            } 
+            else if (target.classList.contains('faq-item')) {
+                target.classList.add('fade-in-bottom');
+            } 
+            else {
+                target.classList.add('reveal-active', 'fade-visible');
+            }
+        });
+
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                const target = entry.target;
+                target.style.transitionDelay = '0s';
+                target.classList.remove('reveal-active', 'fade-visible', 'fade-in-bottom');
+            }
+        });
+    }, scrollOptions);
+
+    const elementsToWatch = document.querySelectorAll(`
+        .services-grid .service-card, 
+        .fade-init, 
+        .faq-item, 
+        .about-image-side, 
+        .about-text-side, 
+        .extra-box
+    `);
+
+    elementsToWatch.forEach(el => {
+        el.classList.remove('delay-1', 'delay-2', 'delay-3', 'delay-4');
+        bidirectionalEngine.observe(el);
+    });
+});
