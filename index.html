@@ -161,22 +161,298 @@
 </div>
 
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3">
-        <img src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png" alt="TNSE logo" class="h-10 w-10 rounded" />
-        <span class="font-semibold text-lg">TNSE Electrical Projects</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Main Navigation">
-        <a href="#about" class="hover:text-primary">About</a>
-        <a href="#services" class="hover:text-primary">Services</a>
-        <a href="#solar" class="hover:text-primary">Solar</a>
-        <a href="#blog" class="hover:text-primary">Blog</a>
-        <a href="#contact-section-container" class="text-white bg-primary px-4 py-2 rounded-md">Contact</a>
-      </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-slate-700"><i class="fa fa-bars fa-lg"></i></button>
+<header class="header">
+    <div class="header-row container" role="navigation">
+        
+        <div class="header-left">
+            <div class="logo">
+                <a class="logo-link" href="https://tnseelectricalprojects.blogspot.com">
+                    <img alt="Logo" class="logo-img logo-light" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1777992465/1777992282657_s1c4ca.png">
+                    <img alt="Logo Dark" class="logo-img logo-dark" src="https://res.cloudinary.com/dulmfdigk/image/upload/v1742312419/IMG-20250318-WA0002_y0kzfs_Circle_hklus3.jpg">
+                </a>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <ul class="main-menu" id="nav-menu">
+                <li class="menu-item"><a href="https://tnseelectricalprojects.blogspot.com/#hero"><i class="fas fa-home"></i> Home</a></li>
+                <li class="menu-item"><a href="https://tnseelectricalprojects.blogspot.com/#about"><i class="fas fa-info-circle"></i> About</a></li>
+
+                <!-- ELECTRICAL MEGA MENU -->
+                <li class="mega-menu">
+                    <a class="mega-menu-trigger" href="#services">
+                        <i class="fas fa-bolt"></i> Electrical <span class="arrow-indicator">+</span>
+                    </a>
+                    <div class="mega-menu-wrapper">
+                        <div class="mega-seo-row hide-mobile">
+                            <p>
+                                Your trusted partner for electrical and solar energy solutions.
+                                From small repairs to large-scale installations, we power homes,
+                                businesses, and industries with safety, efficiency, and reliability.
+                            </p>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-industry"></i> Industrial Solutions</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/plant-maintenance.html">
+                                <i class="fa-solid fa-industry"></i> Plant Maintenance
+                                <span>Proactive upkeep and electrical troubleshooting for industrial facilities.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/heavy-machinery-wiring.html">
+                                <i class="fa-solid fa-gears"></i> Heavy Machinery Wiring
+                                <span>High-voltage installations and specialized cabling for heavy equipment.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/control-systems.html">
+                                <i class="fa-solid fa-microchip"></i> Control Systems
+                                <span>Automation, PLC programming, and smart relay monitoring solutions.</span>
+                            </a>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-house-lightning"></i> Residential Services</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/new-installations.html">
+                                <i class="fa-solid fa-house-medical-circle-check"></i> New Installations
+                                <span>Complete residential and industrial electrical setups.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/fault-finding.html">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i> Fault Finding
+                                <span>Advanced diagnostics and precision circuit troubleshooting.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/renovations.html">
+                                <i class="fa-solid fa-trowel-bricks"></i> Renovations
+                                <span>Modernizing existing electrical infrastructure and lighting.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/rewiring.html">
+                                <i class="fa-solid fa-plug-circle-bolt"></i> Rewiring
+                                <span>Full system cable replacements for safety and efficiency.</span>
+                            </a>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-building-shield"></i> Commercial Services</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/office-fit-outs.html">
+                                <i class="fa-solid fa-building-user"></i> Office Fit-outs
+                                <span>Professional power &amp; lighting for modern workspaces.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/retail-electrical.html">
+                                <i class="fa-solid fa-store"></i> Retail Electrical
+                                <span>Customized shopfront lighting and display power solutions.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/emergency-lighting.html">
+                                <i class="fa-solid fa-lightbulb-on"></i> Emergency Lighting
+                                <span>Safety-compliant backup lighting systems for commercial sites.</span>
+                            </a>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-briefcase-bolt"></i> Contracting Support</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/electrical-sub-contracting.html">
+                                <i class="fa-solid fa-file-signature"></i> Sub-contracting
+                                <span>Reliable support for primary contractors and large-scale sites.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/project-collaboration.html">
+                                <i class="fa-solid fa-handshake-angle"></i> Collaboration
+                                <span>Partnering with engineers and firms for seamless execution.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/compliance.html">
+                                <i class="fa-solid fa-certificate"></i> Compliance
+                                <span>Adhering to safety standards and certified industry regulations.</span>
+                            </a>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-microchip-bolt"></i> Specialized Services</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/electrical-inspections.html">
+                                <i class="fa-solid fa-clipboard-check"></i> Inspections
+                                <span>Comprehensive safety assessments and COC certifications.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/energy-efficiency-audits.html">
+                                <i class="fa-solid fa-chart-simple"></i> Efficiency Audits
+                                <span>Analyze and optimize power consumption to reduce monthly costs.</span>
+                            </a>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <div class="promo-column">
+                                <h4><i class="fa-solid fa-plug-circle-bolt"></i> Need an Electrician?</h4>
+                                <p>Licensed, insured, and ready to help with any job, big or small.</p>
+                                <a class="btn-cta" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
+                                    <i class="fa-solid fa-calendar-check"></i> Book a Service
+                                    <span>Schedule your appointment today</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- SOLAR MEGA MENU -->
+                <li class="mega-menu">
+                    <a class="mega-menu-trigger" href="#solar">
+                        <i class="fas fa-sun"></i> Solar <span class="arrow-indicator">+</span>
+                    </a>
+                    <div class="mega-menu-wrapper">
+                        <div class="mega-seo-row hide-mobile">
+                            <p>
+                                Take control of your energy future. Lower costs, cut your carbon footprint,
+                                and power your home or business with professional solar solutions built to last.
+                            </p>
+                        </div>
+                        
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-house-solar"></i> Residential Solar Solutions</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/rooftop-solar-panel-installation.html">
+                                <i class="fa-solid fa-solar-panel"></i> Rooftop Solar Panel Installation
+                                <span>Efficient residential and industrial solar mountings.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/hybrid-solar-grid-tied-systems.html">
+                                <i class="fa-solid fa-leaf"></i> Hybrid Solar + Grid-Tied Systems
+                                <span>Combine solar power with grid reliability.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/off-grid-solar-power-setups.html">
+                                <i class="fa-solid fa-tower-broadcast"></i> Off-Grid Solar Power
+                                <span>Complete energy independence for remote areas.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/home-solar-battery-storage.html">
+                                <i class="fa-solid fa-battery-full"></i> Home Solar Battery Storage
+                                <span>Backup solutions to keep your home running 24/7.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-water-heating-systems.html">
+                                <i class="fa-solid fa-faucet-vertical"></i> Solar Water Heating Systems
+                                <span>Eco-friendly hot water solutions for your family.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/system-monitoring-maintenance.html">
+                                <i class="fa-solid fa-gauge-high"></i> System Monitoring &amp; Maintenance
+                                <span>Real-time tracking and professional upkeep.</span>
+                            </a>
+                        </div>
+                        
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-solar-panel"></i> Commercial &amp; Industrial Solar</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/large-scale-solar-plant-design.html">
+                                <i class="fa-solid fa-drafting-compass"></i> Solar Plant Design
+                                <span>Professional layout and engineering for large-scale solar farms.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/grid-tied-solar-systems-for-businesses.html">
+                                <i class="fa-solid fa-on-grid"></i> Grid-Tied Systems
+                                <span>Efficient grid integration for commercial and industrial setups.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-power-purchase-agreements-ppas.html">
+                                <i class="fa-solid fa-file-invoice-dollar"></i> PPAs
+                                <span>Custom Power Purchase Agreements to lower energy costs.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/energy-audits-optimization.html">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i> Energy Audits
+                                <span>Comprehensive analysis and optimization of your energy usage.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/ev-charging-station-integration.html">
+                                <i class="fa-solid fa-charging-station"></i> EV Charging
+                                <span>Smart integration of Electric Vehicle charging infrastructure.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/backup-power-ups-solutions.html">
+                                <i class="fa-solid fa-car-battery"></i> Backup Power &amp; UPS
+                                <span>Reliable battery storage and UPS solutions for zero downtime.</span>
+                            </a>
+                        </div>
+                        
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance &amp; Support</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/panel-cleaning-performance-optimization.html">
+                                <i class="fa-solid fa-sparkles"></i> Panel Cleaning
+                                <span>Maximize efficiency with professional debris and dust removal.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/inverter-repairs-replacements.html">
+                                <i class="fa-solid fa-screwdriver-wrench"></i> Inverter Repairs
+                                <span>Expert diagnostics and hardware restoration for your power system.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/battery-system-maintenance.html">
+                                <i class="fa-solid fa-battery-quarter"></i> Battery Maintenance
+                                <span>Ensure long-term storage health and cycle performance optimization.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/system-upgrades-expansions.html">
+                                <i class="fa-solid fa-arrow-up-right-dots"></i> System Upgrades
+                                <span>Scale your solar capacity with the latest high-efficiency modules.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/247-technical-support-monitoring.html">
+                                <i class="fa-solid fa-headset"></i> 24/7 Support
+                                <span>Real-time system monitoring and immediate technical assistance.</span>
+                            </a>
+                        </div>
+                        
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-microchip"></i> Specialized Solar Solutions</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/rural-off-grid-electrification-projects.html">
+                                <i class="fa-solid fa-mountain-city"></i> Rural Electrification
+                                <span>Sustainable power solutions for remote and off-grid communities.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-powered-streetlights-security.html">
+                                <i class="fa-solid fa-lightbulb-on"></i> Streetlights &amp; Security
+                                <span>Advanced solar lighting for public safety and property protection.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/solar-water-pumping-systems-for-farms.html">
+                                <i class="fa-solid fa-faucet-drip"></i> Water Pumping
+                                <span>Efficient irrigation and livestock watering via solar energy.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/mobile-solar-power-units.html">
+                                <i class="fa-solid fa-truck-bolt"></i> Mobile Units
+                                <span>Portable energy systems for rapid deployment and site work.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/custom-energy-consulting-feasibility.html">
+                                <i class="fa-solid fa-lightbulb-gear"></i> Energy Consulting
+                                <span>Expert feasibility studies and tailored energy strategy plans.</span>
+                            </a>
+                        </div>
+                        
+                        <div class="mega-menu-col">
+                            <h5><i class="fa-solid fa-gears"></i> Additional Services</h5>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/free-site-assessment-energy-audit.html">
+                                <i class="fa-solid fa-file-invoice"></i> Free Assessment
+                                <span>Get a professional energy audit and site evaluation.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/financing-flexible-payment-options.html">
+                                <i class="fa-solid fa-comments-dollar"></i> Financing Options
+                                <span>Flexible payment plans tailored to your budget.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/permit-licensing-compliance-assistance.html">
+                                <i class="fa-solid fa-stamp"></i> Permits &amp; Compliance
+                                <span>We handle the paperwork and licensing for you.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/warranty-after-sales-support.html">
+                                <i class="fa-solid fa-shield-check"></i> Warranty Support
+                                <span>Long-term protection and dedicated technical help.</span>
+                            </a>
+                            <a href="https://tnseelectricalprojects.blogspot.com/p/smart-home-integration-with-solar.html">
+                                <i class="fa-solid fa-house-laptop"></i> Smart Integration
+                                <span>Connect your solar system to your smart home.</span>
+                            </a>
+                        </div>
+
+                        <div class="mega-menu-col">
+                            <div class="promo-column">
+                                <h4><i class="fa-solid fa-leaf"></i> Go Green, Save Money</h4>
+                                <p>Get a free estimate and see how much you can save with solar power.</p>
+                                <a class="btn-cta btn-solar" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">
+                                    <i class="fa-solid fa-sun-plant-wilt"></i>
+                                    <div class="btn-text-wrapper">
+                                        <span class="main-text">Get a Free Quote</span>
+                                        <span class="sub-text">Residential &amp; Industrial Solutions</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="menu-item"><a href="https://tnseblogger.blogspot.com"><i class="fas fa-blog"></i> Blog</a></li>
+                <li class="menu-item"><a href="https://tnseelectricalprojects.blogspot.com/#contact-section-container"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li class="menu-item"><a class="btn-quote" href="https://tnseelectricalprojects.blogspot.com/#contact-section-container">Get Quote</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
     </div>
-  </header>
+</header>
 
   <!-- HERO -->
   <section id="home" class="bg-gradient-to-r from-slate-50 to-white py-20">
