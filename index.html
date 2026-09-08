@@ -777,61 +777,271 @@
   </div>
 </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="bg-white py-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-xl font-semibold mb-6">Our Services</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 border rounded-lg">
-          <div class="text-primary text-3xl mb-3"><i class="fa fa-bolt"></i></div>
-          <h4 class="font-semibold mb-2">Electrical Installations</h4>
-          <p class="text-slate-600">Household and commercial wiring, distribution boards, fault-finding and repairs.</p>
+<!-- SERVICES PREVIEW SECTION -->
+<section id="services" class="services-preview bg-slate-900 py-20 lg:py-28 text-white">
+  <div class="services-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="services-header fade-init fade-down text-center max-w-3xl mx-auto mb-16">
+      <span class="sub-heading text-amber-400 font-bold uppercase tracking-widest text-xs block mb-3">Our Expertise</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+        Specialized <span class="text-accent text-amber-400">Energy Solutions</span>
+      </h2>
+      <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        From heavy industrial plants to smart green homes, we provide the technical precision that drives progress and power independence.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="service-card fade-init fade-up delay-1 bg-slate-800/80 border border-slate-700/60 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl transition-all duration-300">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Industrial Electrical</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Comprehensive plant maintenance, heavy machinery wiring, and high-voltage power distribution for large-scale operations.
+          </p>
+          <ul class="card-list space-y-2.5 mb-8 text-sm text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-amber-400 text-xs"></i> Machinery Installs
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-amber-400 text-xs"></i> DB Upgrades
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-amber-400 text-xs"></i> Power Distribution
+            </li>
+          </ul>
         </div>
-        <div class="p-6 border rounded-lg">
-          <div class="text-primary text-3xl mb-3"><i class="fa fa-solar-panel"></i></div>
-          <h4 class="font-semibold mb-2">Solar PV Systems</h4>
-          <p class="text-slate-600">Design and installation of grid-tied and off-grid solar PV systems with battery storage.</p>
+        <a class="card-btn inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm transition-colors duration-200" href="https://tnseelectricalprojects.blogspot.com/p/plant-maintenance.html">
+          Learn More
+        </a>
+      </div>
+
+      <!-- Card 2 (Featured) -->
+      <div class="service-card featured fade-init fade-up delay-2 relative bg-slate-800 border-2 border-amber-500 rounded-2xl p-8 flex flex-col justify-between shadow-2xl shadow-amber-500/10 transform lg:-translate-y-2">
+        <div class="card-tag absolute -top-3.5 right-6 bg-amber-500 text-slate-950 font-extrabold text-xs uppercase tracking-wider py-1 px-3.5 rounded-full shadow-md">
+          Most Popular
         </div>
-        <div class="p-6 border rounded-lg">
-          <div class="text-primary text-3xl mb-3"><i class="fa fa-tools"></i></div>
-          <h4 class="font-semibold mb-2">Maintenance & Support</h4>
-          <p class="text-slate-600">Preventative maintenance, plant support and emergency repairs.</p>
+        <div>
+          <div class="card-icon w-14 h-14 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center text-2xl mb-6 font-bold shadow-lg shadow-amber-500/20">
+            <i class="fa-solid fa-house-solar"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Solar Power Systems</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Premium off-grid and hybrid solar solutions designed to keep South African homes powered during load shedding.
+          </p>
+          <ul class="card-list space-y-2.5 mb-8 text-sm text-slate-200">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-sun text-amber-400 text-xs"></i> Inverter &amp; Battery
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-sun text-amber-400 text-xs"></i> Smart Monitoring
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-sun text-amber-400 text-xs"></i> Hybrid Solutions
+            </li>
+          </ul>
         </div>
+        <a class="card-btn inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-sm shadow-md transition-colors duration-200" href="https://tnseelectricalprojects.blogspot.com/p/home.html#contact-section-container">
+          Get a Quote
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card fade-init fade-up delay-3 bg-slate-800/80 border border-slate-700/60 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl transition-all duration-300">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-building-shield"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Commercial Services</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Reliable electrical fit-outs, data cabling, and emergency backup systems for offices, retail spaces, and warehouses.
+          </p>
+          <ul class="card-list space-y-2.5 mb-8 text-sm text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-check text-amber-400 text-xs"></i> Compliance (COC)
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-check text-amber-400 text-xs"></i> Security Wiring
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-shield-check text-amber-400 text-xs"></i> Data Cabling
+            </li>
+          </ul>
+        </div>
+        <a class="card-btn inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm transition-colors duration-200" href="https://tnseelectricalprojects.blogspot.com/p/compliance.html">
+          Learn More
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card fade-init fade-up delay-4 bg-slate-800/80 border border-slate-700/60 rounded-2xl p-8 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl transition-all duration-300">
+        <div>
+          <div class="card-icon w-14 h-14 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Maintenance &amp; Support</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Proactive service plans, thermal imaging audits, and 24/7 technical support to keep your systems running at peak efficiency.
+          </p>
+          <ul class="card-list space-y-2.5 mb-8 text-sm text-slate-300">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-wrench text-amber-400 text-xs"></i> Thermal Imaging
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-wrench text-amber-400 text-xs"></i> Fault Detection
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-wrench text-amber-400 text-xs"></i> Site Inspections
+            </li>
+          </ul>
+        </div>
+        <a class="card-btn inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm transition-colors duration-200" href="https://tnseelectricalprojects.blogspot.com/p/247-technical-support-monitoring.html">
+          Book Service
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Services Footer -->
+    <div class="services-footer fade-init fade-up delay-4 text-center mt-12 text-slate-400 text-base">
+      <p>Looking for a custom solution? 
+        <a class="text-amber-400 font-semibold hover:underline inline-flex items-center gap-1" href="https://tnseelectricalprojects.blogspot.com/p/home.html#contact-section-container">
+          Contact our engineering team.
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US SECTION -->
+<section id="why-choose" class="why-choose-us bg-slate-950 py-20 lg:py-28 text-white border-t border-slate-800">
+  <div class="why-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    
+    <!-- Left Column: Content -->
+    <div class="why-content fade-init fade-right lg:col-span-7">
+      <span class="sub-heading text-amber-400 font-bold uppercase tracking-widest text-xs block mb-3">The TNSE Advantage</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
+        Professionalism Powered by <span class="text-accent text-amber-400">Compliance</span>
+      </h2>
+      <p class="text-slate-300 text-base sm:text-lg mb-10 leading-relaxed">
+        We don't just provide power; we provide peace of mind. Our registration with national bodies ensures that every wire we pull meets the highest South African safety standards.
+      </p>
+
+      <div class="why-grid space-y-6">
+        
+        <!-- Feature 1 -->
+        <div class="why-item fade-init fade-up delay-1 flex items-start gap-5 p-5 bg-slate-900/60 rounded-xl border border-slate-800">
+          <div class="why-icon-wrap w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <div class="why-text">
+            <h4 class="text-lg font-bold text-white mb-1">ECA (SA) Registered</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">As a member of the Electrical Contractors’ Association of South Africa, our work is backed by the Workmanship Guarantee for your total protection.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="why-item fade-init fade-up delay-2 flex items-start gap-5 p-5 bg-slate-900/60 rounded-xl border border-slate-800">
+          <div class="why-icon-wrap w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-hand-holding-seedling"></i>
+          </div>
+          <div class="why-text">
+            <h4 class="text-lg font-bold text-white mb-1">B-BBEE Level 1 Contributor</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">We are committed to economic transformation. Our Level 1 status provides our corporate clients with maximum procurement recognition.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="why-item fade-init fade-up delay-3 flex items-start gap-5 p-5 bg-slate-900/60 rounded-xl border border-slate-800">
+          <div class="why-icon-wrap w-12 h-12 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-stamp"></i>
+          </div>
+          <div class="why-text">
+            <h4 class="text-lg font-bold text-white mb-1">Department of Labour Certified</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">Fully authorized to issue Certificates of Compliance (COC) for residential, commercial, and industrial installations.</p>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
 
-  <!-- SOLAR HIGHLIGHT -->
-  <section id="solar" class="container mx-auto px-6 py-16">
-    <div class="bg-gradient-to-r from-slate-50 to-white p-8 rounded-lg shadow">
-      <h4 class="text-2xl font-semibold mb-4">Solar Solutions for Reliable Power</h4>
-      <p class="text-slate-600 mb-4">We design hybrid and off-grid systems that combine solar PV, inverters and battery storage for continuous power even during outages.</p>
-      <a href="#contact-section-container" class="inline-block bg-primary text-white px-4 py-2 rounded-md">Get a solar quote</a>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS (placeholder element for carousel) -->
-  <section id="testimonials" class="section-padding parallax-bg">
-    <div class="container">
-      <div class="section-header text-center mb-12">
-        <span class="sub-heading text-primary uppercase tracking-wider font-bold">Client Feedback</span>
-        <h2 class="text-3xl mt-4"><i class="fas fa-users-viewfinder"></i> Trusted by <span class="text-accent text-primary">Industry Leaders</span></h2>
+    <!-- Right Column: Visual Shield Card -->
+    <div class="why-visual fade-init fade-left delay-2 lg:col-span-5 flex justify-center">
+      <div class="shield-box w-full max-w-sm bg-gradient-to-b from-slate-800 to-slate-900 border-2 border-amber-500/40 rounded-2xl p-10 text-center shadow-2xl relative overflow-hidden">
+        <i class="fa-solid fa-shield-check text-6xl text-amber-400 mb-6 block"></i>
+        <h3 class="text-3xl font-black text-white leading-tight uppercase tracking-wide mb-4">
+          Fully<br />Compliant
+        </h3>
+        <div class="shield-line w-16 h-1 bg-amber-500 mx-auto rounded-full mb-4"></div>
+        <p class="text-slate-300 text-sm font-semibold tracking-wide">Safety Standards SANS 10142-1</p>
       </div>
-      <div id="testimonialCarousel" class="testimonial-carousel"></div>
     </div>
-  </section>
 
-  <!-- FAQ (container placeholder) -->
-  <section id="faq" class="section-padding parallax-bg">
-    <div class="container">
-      <div class="section-header text-center mb-12">
-        <span class="sub-heading text-yellow-400 uppercase tracking-wider font-bold">Expert Knowledge</span>
-        <h2 class="text-3xl mt-4"><i class="fas fa-circle-question"></i> Frequently Asked <span class="text-accent text-yellow-400">Questions</span></h2>
-      </div>
-      <div id="faqAccordion" class="faq-accordion-container"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" class="section-padding parallax-bg bg-slate-900 py-20 lg:py-28 text-white relative overflow-hidden">
+  <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="section-header fade-init fade-down text-center max-w-3xl mx-auto mb-12">
+      <span class="sub-heading text-amber-400 uppercase tracking-widest font-bold text-xs block mb-2">Client Feedback</span>
+      <h2 class="section-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+        <i class="fas fa-users-viewfinder text-amber-400 mr-2"></i> Trusted by <span class="text-accent text-amber-400">Industry Leaders</span>
+      </h2>
     </div>
-  </section>
 
+    <!-- Carousel Mounting Point with Controls -->
+    <div class="testimonial-carousel-wrapper fade-init fade-up delay-2 relative max-w-4xl mx-auto">
+      <div id="testimonialCarousel" class="testimonial-carousel min-h-[220px]"></div>
+
+      <!-- Navigation Controls -->
+      <button id="prevTestimonial" aria-label="Previous" class="carousel-nav prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 w-11 h-11 rounded-full bg-slate-800/80 hover:bg-amber-500 hover:text-slate-950 border border-slate-700 text-white flex items-center justify-center transition-all duration-200 z-10 shadow-lg">
+        <i class="fas fa-chevron-left text-sm"></i>
+      </button>
+      <button id="nextTestimonial" aria-label="Next" class="carousel-nav next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 w-11 h-11 rounded-full bg-slate-800/80 hover:bg-amber-500 hover:text-slate-950 border border-slate-700 text-white flex items-center justify-center transition-all duration-200 z-10 shadow-lg">
+        <i class="fas fa-chevron-right text-sm"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="section-padding parallax-bg bg-slate-950 py-20 lg:py-28 text-white border-t border-slate-800">
+  <div class="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="section-header fade-init fade-down text-center mb-12">
+      <span class="sub-heading text-amber-400 uppercase tracking-widest font-bold text-xs block mb-3">Expert Knowledge</span>
+      <h2 class="section-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+        <i class="fas fa-circle-question text-amber-400 mr-2"></i> Frequently Asked <span class="text-accent text-amber-400">Questions</span>
+      </h2>
+    </div>
+
+    <!-- Accordion Mounting Point -->
+    <div id="faqAccordion" class="faq-accordion-container fade-init fade-up delay-1 space-y-4 min-h-[150px]"></div>
+
+    <!-- Footer CTA -->
+    <div class="faq-footer fade-init fade-up delay-2 text-center mt-12 pt-8 border-t border-slate-800/80">
+      <p class="text-slate-400 text-base">
+        Don't see the answer you're looking for? 
+        <a class="text-amber-400 font-bold hover:underline inline-flex items-center gap-1.5 ml-1" href="https://tnseelectricalprojects.blogspot.com/p/home.html#contact-section-container">
+          Contact our technical team <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>
   <!-- CONTACT -->
   <section id="contact-section-container" class="section-padding parallax-bg bg-slate-100 py-16">
     <div class="container mx-auto px-6">
